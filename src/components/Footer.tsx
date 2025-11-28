@@ -1,37 +1,60 @@
 import { Heart } from "lucide-react";
-import EKGLine from "./EKGLine";
 
 const Footer = () => {
   return (
-    <footer className="py-16 bg-secondary/50 border-t border-border">
+    <footer className="bg-card border-t border-border py-12">
       <div className="container px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* EKG Line */}
-          <div className="mb-8 text-primary/30">
-            <EKGLine />
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="p-2 rounded-xl bg-primary/10">
+                <Heart className="w-6 h-6 text-primary" />
+              </div>
+              <span className="text-xl font-semibold text-primary">EKG Jetzt</span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4 max-w-sm">
+              Telemedizinische Kardiologie von Dr. med. Rebekka Suwelack. 
+              Schnelle, kompetente Einschätzung Ihrer Herzbefunde.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Dr. med. Rebekka Suwelack<br />
+              Fachärztin für Innere Medizin und Kardiologie
+            </p>
           </div>
 
-          {/* Logo */}
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Heart className="w-6 h-6 text-primary" />
-            <span className="text-xl font-semibold text-foreground">EKG Jetzt</span>
+          {/* Services */}
+          <div>
+            <h4 className="font-semibold text-foreground mb-4">Services</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><a href="#services" className="hover:text-primary transition-colors">EKG-Analyse</a></li>
+              <li><a href="#services" className="hover:text-primary transition-colors">Zweitmeinung</a></li>
+              <li><a href="#services" className="hover:text-primary transition-colors">Video-Sprechstunde</a></li>
+              <li><a href="#services" className="hover:text-primary transition-colors">Herzschlag-Club</a></li>
+            </ul>
           </div>
 
-          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-            Strategie-Playbook für telemedizinische Kardiologie. 
-            Rechtlich fundiert, wirtschaftlich validiert, operativ umsetzbar.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            <span>Telemedizin B2C</span>
-            <span className="text-border">•</span>
-            <span>Versicherer-Kooperation</span>
-            <span className="text-border">•</span>
-            <span>Premium-Membership</span>
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold text-foreground mb-4">Rechtliches</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><a href="#" className="hover:text-primary transition-colors">Impressum</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Datenschutz</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">AGB</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Widerrufsrecht</a></li>
+            </ul>
           </div>
+        </div>
 
-          <div className="mt-12 pt-8 border-t border-border text-sm text-muted-foreground">
-            © 2024 EKG Jetzt — Alle Rechte vorbehalten
+        <div className="pt-8 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} EKG Jetzt. Alle Rechte vorbehalten.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Bei Notfällen: <strong className="text-ekg-coral">112</strong> • 
+              Diese Website ersetzt keine ärztliche Untersuchung vor Ort.
+            </p>
           </div>
         </div>
       </div>

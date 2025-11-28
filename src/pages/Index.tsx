@@ -1,34 +1,36 @@
-import { useState } from "react";
+import NavigationHeader from "@/components/NavigationHeader";
 import HeroSection from "@/components/HeroSection";
-import RecommendationsSection from "@/components/RecommendationsSection";
-import DetailSection from "@/components/DetailSection";
-import TimelineSection from "@/components/TimelineSection";
-import MetricsSection from "@/components/MetricsSection";
+import ProblemSection from "@/components/ProblemSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import TrustSection from "@/components/TrustSection";
+import MembershipSection from "@/components/MembershipSection";
+import FAQSection from "@/components/FAQSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const [selectedRecommendation, setSelectedRecommendation] = useState<number | null>(null);
-
-  if (selectedRecommendation) {
-    return (
-      <main className="min-h-screen">
-        <DetailSection 
-          id={selectedRecommendation} 
-          onClose={() => setSelectedRecommendation(null)} 
-        />
-        <Footer />
-      </main>
-    );
-  }
-
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <RecommendationsSection onSelectRecommendation={setSelectedRecommendation} />
-      <TimelineSection />
-      <MetricsSection />
+    <>
+      <NavigationHeader />
+      <main className="min-h-screen">
+        <HeroSection />
+        <ProblemSection />
+        <AboutSection />
+        <ServicesSection />
+        <div id="how-it-works">
+          <HowItWorksSection />
+        </div>
+        <TrustSection />
+        <MembershipSection />
+        <div id="faq">
+          <FAQSection />
+        </div>
+        <ContactSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 
