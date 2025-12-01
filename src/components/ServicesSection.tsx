@@ -141,6 +141,8 @@ const ServicesSection = () => {
   const handleBooking = (service: string) => {
     if (service === "Video-Sprechstunde") {
       window.open("https://calendly.com/ekgjetzt-info/20min", "_blank");
+    } else if (service === "EKG-Analyse") {
+      window.open("https://n8n.avantic.de/form/565070bc-9ed8-402a-bde9-8097a193774c", "_blank");
     } else {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }
