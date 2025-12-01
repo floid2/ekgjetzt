@@ -52,7 +52,7 @@ const NavigationHeader = () => {
             <img 
               src={ekgJetztLogo} 
               alt="EKG Jetzt - Kardiologie Online" 
-              className="h-16 md:h-20 w-auto"
+              className="h-20 md:h-28 w-auto"
             />
           </Link>
 
