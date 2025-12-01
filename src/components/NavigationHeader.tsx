@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import ekgJetztLogo from "@/assets/ekg-jetzt-logo.png";
@@ -7,6 +8,9 @@ import ekgJetztLogo from "@/assets/ekg-jetzt-logo.png";
 const NavigationHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +21,11 @@ const NavigationHeader = () => {
   }, []);
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${id}`);
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -40,17 +48,13 @@ const NavigationHeader = () => {
       <div className="container px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a 
-            href="#" 
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-            className="flex items-center"
-          >
+          <Link to="/" className="flex items-center">
             <img 
               src={ekgJetztLogo} 
               alt="EKG Jetzt - Kardiologie Online" 
               className="h-10 md:h-12 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
