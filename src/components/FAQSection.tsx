@@ -33,7 +33,7 @@ const FAQSection = () => {
     },
     {
       question: "Kann ich die Leistungen von der Krankenkasse erstattet bekommen?",
-      answer: "Private Krankenversicherungen erstatten telemedizinische Leistungen häufig. Gesetzlich Versicherte können die Rechnung bei ihrer Krankenkasse einreichen — eine Erstattung ist je nach Kasse möglich.",
+      answer: "Private Krankenversicherungen erstatten telemedizinische Leistungen häufig. Gesetzlich Versicherte tragen die Kosten in der Regel selbst. Wir empfehlen jedoch, bei Ihrer Kasse nachzufragen, ob eine Übernahme im Rahmen von Bonusprogrammen oder Gesundheitskonten möglich ist.",
     },
     {
       question: "Was passiert, wenn das EKG auffällig ist?",
