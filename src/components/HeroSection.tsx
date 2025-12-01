@@ -1,6 +1,7 @@
 import { Heart, Shield, Clock, Award } from "lucide-react";
 import EKGLine from "./EKGLine";
 import { Button } from "./ui/button";
+import drSuwelackImg from "@/assets/dr-suwelack.png";
 
 const HeroSection = () => {
   const scrollToServices = () => {
@@ -88,19 +89,15 @@ const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-ekg-coral/10 rounded-full blur-2xl" />
               
               {/* Image Container */}
-              <div className="relative bg-gradient-to-br from-primary/10 to-ekg-mint/20 rounded-3xl p-8 border border-primary/10">
-                {/* Placeholder for Dr. Rebekka's Photo */}
-                <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden">
-                  <div className="text-center p-6">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Heart className="w-16 h-16 text-primary/40" />
-                    </div>
-                    <p className="text-muted-foreground text-sm">Bild von Dr. Suwelack</p>
-                  </div>
-                </div>
+              <div className="relative rounded-3xl overflow-hidden border border-primary/10 shadow-2xl">
+                <img 
+                  src={drSuwelackImg} 
+                  alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie"
+                  className="w-full h-auto object-cover"
+                />
 
                 {/* Floating Card */}
-                <div className="absolute -bottom-4 -left-4 bg-card rounded-xl p-4 shadow-xl border border-border">
+                <div className="absolute bottom-4 left-4 right-4 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-border">
                   <p className="font-serif text-lg text-foreground">Dr. med. Rebekka Suwelack</p>
                   <p className="text-sm text-muted-foreground">Fachärztin für Innere Medizin</p>
                   <p className="text-sm text-primary font-medium">& Kardiologie</p>
