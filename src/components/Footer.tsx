@@ -1,5 +1,5 @@
-import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import ekgJetztLogo from "@/assets/ekg-jetzt-logo.png";
 
 const Footer = () => {
   return (
@@ -8,12 +8,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-xl bg-primary/10">
-                <Heart className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-xl font-semibold text-primary">EKG Jetzt</span>
-            </div>
+            <Link to="/" className="flex items-center mb-4">
+              <img 
+                src={ekgJetztLogo} 
+                alt="EKG Jetzt - Kardiologie Online" 
+                className="h-12 w-auto"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground mb-4 max-w-sm">
               Telemedizinische Kardiologie von Dr. med. Rebekka Suwelack. 
               Schnelle, kompetente Einschätzung Ihrer Herzbefunde.
