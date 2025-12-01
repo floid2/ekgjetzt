@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Heart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import ekgJetztLogo from "@/assets/ekg-jetzt-logo.png";
 
 const NavigationHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,12 +43,13 @@ const NavigationHeader = () => {
           <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-            className="flex items-center gap-2"
+            className="flex items-center"
           >
-            <div className="p-2 rounded-xl bg-primary/10">
-              <Heart className="w-5 h-5 text-primary" />
-            </div>
-            <span className="text-lg font-semibold text-primary">EKG Jetzt</span>
+            <img 
+              src={ekgJetztLogo} 
+              alt="EKG Jetzt - Kardiologie Online" 
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}

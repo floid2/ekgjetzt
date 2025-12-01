@@ -37,13 +37,28 @@ const HeroSection = () => {
               <span className="text-primary block">Experten-Händen</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <strong className="text-foreground">Herz-Kreislauf-Erkrankungen sind Todesursache Nr. 1 in Deutschland.</strong>
+            <p className="text-lg md:text-xl text-foreground mb-2 animate-slide-up font-medium" style={{ animationDelay: "0.1s" }}>
+              Ihr Herz schlägt – wir hören hin.
             </p>
 
-            <p className="text-muted-foreground mb-8 animate-slide-up max-w-xl" style={{ animationDelay: "0.2s" }}>
-              Mit telemedizinischer Kardiologie erhalten Sie schnelle, kompetente Einschätzung Ihrer Smartwatch-EKGs und Herzbefunde — ohne lange Wartezeiten, von zu Hause aus.
+            <p className="text-muted-foreground mb-6 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+              Smartwatch-EKG auffällig? Holen Sie sich jetzt eine fundierte ärztliche Einschätzung.
             </p>
+
+            <ul className="space-y-2 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              <li className="flex items-start gap-2 text-muted-foreground">
+                <span className="text-primary font-bold">✓</span>
+                <span>Befund in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
+              </li>
+              <li className="flex items-start gap-2 text-muted-foreground">
+                <span className="text-primary font-bold">✓</span>
+                <span>Bequem online – <strong className="text-foreground">ohne Wartezimmer</strong></span>
+              </li>
+              <li className="flex items-start gap-2 text-muted-foreground">
+                <span className="text-primary font-bold">✓</span>
+                <span>Sicher, verständlich und <strong className="text-foreground">DSGVO-konform</strong></span>
+              </li>
+            </ul>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10 animate-slide-up" style={{ animationDelay: "0.3s" }}>
