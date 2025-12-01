@@ -33,15 +33,11 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 animate-slide-up text-foreground leading-tight">
-              Ihre Herzgesundheit in
-              <span className="text-primary block">Experten-Händen</span>
+              Ihr Herz schlägt –
+              <span className="text-primary block">wir hören hin.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-foreground mb-2 animate-slide-up font-medium" style={{ animationDelay: "0.1s" }}>
-              Ihr Herz schlägt – wir hören hin.
-            </p>
-
-            <p className="text-muted-foreground mb-6 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-slide-up max-w-xl" style={{ animationDelay: "0.1s" }}>
               Smartwatch-EKG auffällig? Holen Sie sich jetzt eine fundierte ärztliche Einschätzung.
             </p>
 
