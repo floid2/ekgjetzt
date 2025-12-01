@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src={ekgJetztLogo} 
                 alt="EKG Jetzt - Kardiologie Online" 
-                className="h-12 w-auto"
+                className="h-16 md:h-20 w-auto"
               />
             </Link>
             <p className="text-sm text-muted-foreground mb-4 max-w-sm">
