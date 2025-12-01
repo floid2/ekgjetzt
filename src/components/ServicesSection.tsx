@@ -139,8 +139,11 @@ const ServicesSection = () => {
   ];
 
   const handleBooking = (service: string) => {
-    // Scroll to contact or open booking form
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    if (service === "Video-Sprechstunde") {
+      window.open("https://calendly.com/ekgjetzt-info/20min", "_blank");
+    } else {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
