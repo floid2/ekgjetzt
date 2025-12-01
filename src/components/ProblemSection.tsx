@@ -73,7 +73,7 @@ const ProblemSection = () => {
               <p className="text-muted-foreground">
                 Mit moderner Telemedizin können Sie Ihre Herzgesundheit proaktiv überwachen. 
                 Smartwatches erkennen Vorhofflimmern mit über 95% Genauigkeit — aber die 
-                Interpretation gehört in ärztliche Hände.
+                Interpretation gehört in ärztliche Hände. <span className="text-primary font-medium">Wir schließen diese Lücke.</span>
               </p>
             </div>
           </div>

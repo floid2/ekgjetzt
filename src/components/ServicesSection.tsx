@@ -120,7 +120,6 @@ const ServicesSection = () => {
       ],
       icon: <FileText className="w-7 h-7" />,
       color: "coral" as const,
-      popular: true,
     },
     {
       tier: "Best",
