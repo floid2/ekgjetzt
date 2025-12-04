@@ -68,14 +68,16 @@ const AboutSection = () => {
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Als Fachärztin für Innere Medizin und Kardiologie verbinde ich klassische 
-              medizinische Expertise mit den Möglichkeiten moderner Telemedizin.
+              klinische Expertise mit den Vorteilen moderner Telemedizin. Mit über 10 Jahren 
+              Berufserfahrung – unter anderem als Funktions-Oberärztin – greife ich auf ein 
+              breites Fundament in der gesamten Herz-Kreislauf-Medizin zurück.
             </p>
             
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Mein Fokus liegt darauf, Ihnen schnell und kompetent Klarheit über Ihre 
-              Herzbefunde zu geben. Ob Smartwatch-EKG, Arztbrief-Zweitmeinung oder 
-              persönliche Video-Konsultation — Sie erhalten eine fundierte ärztliche 
-              Einschätzung von einer erfahrenen Kardiologin.
+              Mein Fokus liegt darauf, Ihnen schnell und kompetent Sicherheit zu geben. 
+              Ob Analyse Ihres Smartwatch-EKGs, unabhängige Zweitmeinung oder persönliche 
+              Video-Konsultation: Sie erhalten eine fundierte Einschätzung und klare 
+              Handlungsempfehlungen direkt von einer erfahrenen Kardiologin.
             </p>
 
             {/* Credentials Grid */}
