@@ -8,6 +8,17 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
 import HerzschlagClub from "./pages/HerzschlagClub";
+import Herzgesundheit from "./pages/Herzgesundheit";
+import Anatomie from "./pages/herzgesundheit/Anatomie";
+import Fakten from "./pages/herzgesundheit/Fakten";
+import Risikofaktoren from "./pages/herzgesundheit/Risikofaktoren";
+import Erkrankungen from "./pages/herzgesundheit/Erkrankungen";
+import Rhythmusstoerungen from "./pages/herzgesundheit/Rhythmusstoerungen";
+import Bluthochdruck from "./pages/herzgesundheit/Bluthochdruck";
+import Sport from "./pages/herzgesundheit/Sport";
+import Ernaehrung from "./pages/herzgesundheit/Ernaehrung";
+import Frauenherzen from "./pages/herzgesundheit/Frauenherzen";
+import Studien from "./pages/herzgesundheit/Studien";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
