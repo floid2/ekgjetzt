@@ -10,7 +10,7 @@ interface ServiceCardProps {
   features: string[];
   icon: React.ReactNode;
   color: "teal" | "coral" | "gold";
-  popular?: boolean;
+  recommended?: boolean;
   ctaText: string;
   onSelect: () => void;
 }
@@ -19,39 +19,39 @@ const colorStyles = {
   teal: {
     badge: "bg-primary/10 text-primary",
     icon: "bg-primary/10 text-primary",
-    button: "bg-primary hover:bg-primary/90 text-primary-foreground",
-    border: "border-primary/20 hover:border-primary/40",
-    highlight: "ring-2 ring-primary ring-offset-2 ring-offset-background",
+    button: "bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25",
+    border: "border-border hover:border-primary/40",
+    check: "text-primary",
   },
   coral: {
     badge: "bg-ekg-coral/10 text-ekg-coral",
     icon: "bg-ekg-coral/10 text-ekg-coral",
-    button: "bg-ekg-coral hover:bg-ekg-coral/90 text-white",
-    border: "border-ekg-coral/20 hover:border-ekg-coral/40",
-    highlight: "ring-2 ring-ekg-coral ring-offset-2 ring-offset-background",
+    button: "bg-ekg-coral hover:bg-ekg-coral/90 text-white shadow-lg shadow-ekg-coral/25",
+    border: "border-border hover:border-ekg-coral/40",
+    check: "text-ekg-coral",
   },
   gold: {
     badge: "bg-ekg-gold/10 text-ekg-gold",
     icon: "bg-ekg-gold/10 text-ekg-gold",
-    button: "bg-ekg-gold hover:bg-ekg-gold/90 text-white",
-    border: "border-ekg-gold/20 hover:border-ekg-gold/40",
-    highlight: "ring-2 ring-ekg-gold ring-offset-2 ring-offset-background",
+    button: "bg-ekg-gold hover:bg-ekg-gold/90 text-white shadow-lg shadow-ekg-gold/25",
+    border: "border-border hover:border-ekg-gold/40",
+    check: "text-ekg-gold",
   },
 };
 
-const ServiceCard = ({ tier, title, price, description, features, icon, color, popular, ctaText, onSelect }: ServiceCardProps) => {
+const ServiceCard = ({ tier, title, price, description, features, icon, color, recommended, ctaText, onSelect }: ServiceCardProps) => {
   const styles = colorStyles[color];
   
   return (
     <div className={cn(
-      "relative bg-card rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1",
+      "relative bg-card rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 shadow-lg",
       styles.border,
-      popular && styles.highlight
+      recommended && "ring-2 ring-ekg-coral ring-offset-2 ring-offset-background scale-[1.02]"
     )}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <span className={cn("px-4 py-1 rounded-full text-xs font-medium", styles.badge)}>
-            Beliebteste Wahl
+      {recommended && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span className="px-5 py-1.5 rounded-full text-sm font-semibold bg-ekg-coral text-white shadow-md">
+            Empfohlen
           </span>
         </div>
       )}
@@ -61,26 +61,26 @@ const ServiceCard = ({ tier, title, price, description, features, icon, color, p
       </div>
       
       <span className={cn("text-xs font-medium uppercase tracking-wider", styles.badge, "bg-transparent px-0")}>{tier}</span>
-      <h3 className="text-2xl font-serif mt-2 mb-1 text-foreground">{title}</h3>
+      <h3 className="text-2xl font-serif mt-2 mb-4 text-foreground">{title}</h3>
       
-      <div className="flex items-baseline gap-1 mb-4">
-        <span className="text-4xl font-serif text-foreground">{price}</span>
-        <span className="text-muted-foreground">€</span>
+      <div className="flex items-baseline gap-1 mb-6">
+        <span className="text-5xl font-bold text-foreground">{price}</span>
+        <span className="text-xl text-muted-foreground">€</span>
       </div>
       
-      <p className="text-muted-foreground mb-6 text-sm leading-relaxed">{description}</p>
+      <p className="text-muted-foreground mb-8 text-sm leading-relaxed">{description}</p>
       
-      <ul className="space-y-3 mb-8">
+      <ul className="space-y-4 mb-10">
         {features.map((feature, idx) => (
           <li key={idx} className="flex items-start gap-3 text-sm">
-            <Check className={cn("w-5 h-5 flex-shrink-0 mt-0.5", color === "teal" ? "text-primary" : color === "coral" ? "text-ekg-coral" : "text-ekg-gold")} />
+            <Check className={cn("w-5 h-5 flex-shrink-0 mt-0.5", styles.check)} />
             <span className="text-muted-foreground">{feature}</span>
           </li>
         ))}
       </ul>
       
       <Button 
-        className={cn("w-full rounded-full group", styles.button)}
+        className={cn("w-full rounded-full group text-base py-6", styles.button)}
         onClick={onSelect}
       >
         {ctaText}
@@ -123,6 +123,7 @@ const ServicesSection = () => {
       icon: <FileText className="w-7 h-7" />,
       color: "coral" as const,
       ctaText: "Zweitmeinung anfordern",
+      recommended: true,
     },
     {
       tier: "Best",
@@ -153,13 +154,13 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="services" className="py-28 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <div className="text-center mb-20">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             Leistungen
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-serif mb-6 text-foreground">
             Unsere telekardiologischen Leistungen
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -167,7 +168,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {services.map((service) => (
             <ServiceCard 
               key={service.title}
@@ -177,8 +178,7 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Self-Payer Note */}
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground">
             Es handelt sich um Selbstzahlerleistungen. Details zur möglichen Erstattung finden Sie in unseren FAQ.
           </p>

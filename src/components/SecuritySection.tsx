@@ -1,4 +1,4 @@
-import { Lock, Server, UserCheck, Shield, FileCheck } from "lucide-react";
+import { Lock, Globe, UserCheck, ShieldCheck, FileKey } from "lucide-react";
 
 const SecuritySection = () => {
   const securityFeatures = [
@@ -7,7 +7,7 @@ const SecuritySection = () => {
       text: "Verschlüsselte Datenübertragung",
     },
     {
-      icon: <Server className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6" />,
       text: "Speicherung ausschließlich in der EU",
     },
     {
@@ -15,21 +15,21 @@ const SecuritySection = () => {
       text: "Zugriff nur durch die Ärztin",
     },
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <ShieldCheck className="w-6 h-6" />,
       text: "Vollständig DSGVO-konform",
     },
     {
-      icon: <FileCheck className="w-6 h-6" />,
+      icon: <FileKey className="w-6 h-6" />,
       text: "Ärztliche Schweigepflicht garantiert",
     },
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <div className="text-center mb-14">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Datenschutz
             </span>
             <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
@@ -37,19 +37,28 @@ const SecuritySection = () => {
             </h2>
           </div>
 
-          <div className="bg-card rounded-2xl p-8 border border-border shadow-sm">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {securityFeatures.map((feature, idx) => (
+          <div className="bg-card rounded-2xl p-10 border border-border shadow-lg">
+            <div className="grid sm:grid-cols-2 gap-8">
+              {securityFeatures.slice(0, 4).map((feature, idx) => (
                 <div 
                   key={idx}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
                     {feature.icon}
                   </div>
-                  <p className="text-muted-foreground">{feature.text}</p>
+                  <p className="text-foreground font-medium">{feature.text}</p>
                 </div>
               ))}
+            </div>
+            {/* Fifth item centered below */}
+            <div className="flex justify-center mt-8 pt-8 border-t border-border">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                  {securityFeatures[4].icon}
+                </div>
+                <p className="text-foreground font-medium">{securityFeatures[4].text}</p>
+              </div>
             </div>
           </div>
         </div>
