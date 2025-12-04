@@ -35,6 +35,7 @@ const NavigationHeader = () => {
     { label: "So funktioniert's", id: "how-it-works" },
     { label: "FAQ", id: "faq" },
     { label: "Herzgesundheit", id: "herzgesundheit", isPage: true },
+    { label: "Blog", id: "blog", isPage: true },
     { label: "Herzschlag-Club", id: "herzschlagclub", isPage: true },
   ];
 

@@ -19,6 +19,10 @@ import Sport from "./pages/herzgesundheit/Sport";
 import Ernaehrung from "./pages/herzgesundheit/Ernaehrung";
 import Frauenherzen from "./pages/herzgesundheit/Frauenherzen";
 import Studien from "./pages/herzgesundheit/Studien";
+import Blog from "./pages/Blog";
+import SmartwatchEKG from "./pages/blog/SmartwatchEKG";
+import Vorhofflimmern from "./pages/blog/Vorhofflimmern";
+import EisenmangelFrauen from "./pages/blog/EisenmangelFrauen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +50,10 @@ const App = () => (
           <Route path="/herzgesundheit/ernaehrung" element={<Ernaehrung />} />
           <Route path="/herzgesundheit/frauenherzen" element={<Frauenherzen />} />
           <Route path="/herzgesundheit/studien" element={<Studien />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/smartwatch-ekg-was-zeigt-es" element={<SmartwatchEKG />} />
+          <Route path="/blog/vorhofflimmern-symptome-behandlung" element={<Vorhofflimmern />} />
+          <Route path="/blog/eisenmangel-frauen-herz" element={<EisenmangelFrauen />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
