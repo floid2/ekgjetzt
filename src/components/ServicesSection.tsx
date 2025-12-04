@@ -1,4 +1,4 @@
-import { Watch, FileText, Video, Check, ArrowRight } from "lucide-react";
+import { Watch, FileText, Video, Check, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +11,7 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   color: "teal" | "coral" | "gold";
   popular?: boolean;
+  ctaText: string;
   onSelect: () => void;
 }
 
@@ -38,7 +39,7 @@ const colorStyles = {
   },
 };
 
-const ServiceCard = ({ tier, title, price, description, features, icon, color, popular, onSelect }: ServiceCardProps) => {
+const ServiceCard = ({ tier, title, price, description, features, icon, color, popular, ctaText, onSelect }: ServiceCardProps) => {
   const styles = colorStyles[color];
   
   return (
@@ -82,7 +83,7 @@ const ServiceCard = ({ tier, title, price, description, features, icon, color, p
         className={cn("w-full rounded-full group", styles.button)}
         onClick={onSelect}
       >
-        Jetzt buchen
+        {ctaText}
         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
       </Button>
     </div>
@@ -93,55 +94,58 @@ const ServicesSection = () => {
   const services = [
     {
       tier: "Good",
-      title: "EKG-Analyse",
+      title: "Smartwatch-EKG Analyse",
       price: "39",
-      description: "Ihre Smartwatch-EKG professionell ausgewertet. Ideal für eine erste Einschätzung.",
+      description: "Für Apple Watch, Samsung, Garmin etc. – Ihre Smartwatch-EKG professionell ausgewertet.",
       features: [
-        "Smartwatch-EKG Upload",
-        "Befund innerhalb 48 Stunden",
-        "Schriftliche Einschätzung",
-        "Handlungsempfehlung",
-        "E-Mail-Support bei Rückfragen",
+        "Upload des EKGs (PDF oder Screenshot)",
+        "Fachärztliche Interpretation",
+        "Einschätzung: unauffällig / kontrollbedürftig / abklärungsbedürftig",
+        "Ergebnis in 24–48h",
+        "Klare Handlungsempfehlung",
       ],
       icon: <Watch className="w-7 h-7" />,
       color: "teal" as const,
+      ctaText: "EKG jetzt hochladen",
     },
     {
       tier: "Better",
-      title: "Zweitmeinung",
+      title: "Ärztliche Zweitmeinung",
       price: "69",
-      description: "Ausführliche Analyse Ihrer Befunde mit detailliertem Bericht.",
+      description: "Strukturierte Zweitmeinung zu Ihren bestehenden Herzbefunden.",
       features: [
-        "Arztbrief-Analyse",
-        "Befund innerhalb 24 Stunden",
-        "Ausführlicher Bericht",
-        "E-Mail-Rückfragen inklusive",
-        "Verständliche Erklärungen",
+        "Upload von Arztbrief, EKG-Bericht, Entlassungsbrief",
+        "Strukturierte Zweitmeinung durch Kardiologin",
+        "Einordnung der bisherigen Diagnose",
+        "Empfehlung zum weiteren Vorgehen",
+        "Befund innerhalb 24–48h",
       ],
       icon: <FileText className="w-7 h-7" />,
       color: "coral" as const,
+      ctaText: "Zweitmeinung anfordern",
     },
     {
       tier: "Best",
       title: "Video-Sprechstunde",
       price: "99",
-      description: "Persönliches Gespräch mit Dr. Suwelack per Video.",
+      description: "Persönliches Gespräch mit Dr. Suwelack per zertifizierter Videosprechstunde.",
       features: [
-        "20 Min. Video-Konsultation",
-        "Terminwahl nach Wunsch",
-        "Befundbesprechung live",
+        "20 Minuten Video-Konsultation",
+        "Besprechung von Beschwerden & Befunden",
+        "Raum für Ihre Rückfragen",
+        "Konkrete Empfehlung für nächste Schritte",
         "Schriftliche Zusammenfassung",
-        "Individuelle Empfehlungen",
       ],
       icon: <Video className="w-7 h-7" />,
       color: "gold" as const,
+      ctaText: "Video-Termin buchen",
     },
   ];
 
   const handleBooking = (service: string) => {
     if (service === "Video-Sprechstunde") {
       window.open("https://calendly.com/ekgjetzt-info/20min", "_blank");
-    } else if (service === "EKG-Analyse") {
+    } else if (service === "Smartwatch-EKG Analyse") {
       window.open("https://n8n.avantic.de/form/565070bc-9ed8-402a-bde9-8097a193774c", "_blank");
     } else {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -156,7 +160,7 @@ const ServicesSection = () => {
             Leistungen
           </span>
           <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
-            Wählen Sie Ihren Service
+            Unsere Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Drei Wege zur kardiologischen Expertise — passend zu Ihrem Anliegen
@@ -173,9 +177,12 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Trust Note */}
+        {/* Self-Payer Note */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground mb-4">
+            Selbstzahlerleistungen — nähere Informationen in den FAQ.
+          </p>
+          <p className="text-xs text-muted-foreground">
             Alle Preise inkl. MwSt. • Sichere Zahlung via Stripe • 
             <span className="text-primary"> 100% vertraulich & DSGVO-konform</span>
           </p>

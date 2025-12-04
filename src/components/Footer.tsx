@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ekgJetztLogo from "@/assets/ekg-jetzt-logo.png";
+import { AlertTriangle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -32,7 +33,7 @@ const Footer = () => {
               <li><a href="#services" className="hover:text-primary transition-colors">EKG-Analyse</a></li>
               <li><a href="#services" className="hover:text-primary transition-colors">Zweitmeinung</a></li>
               <li><a href="#services" className="hover:text-primary transition-colors">Video-Sprechstunde</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Herzschlag-Club</a></li>
+              <li><Link to="/herzschlagclub" className="hover:text-primary transition-colors">Herzschlag-Club</Link></li>
             </ul>
           </div>
 
@@ -43,7 +44,19 @@ const Footer = () => {
               <li><Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link></li>
               <li><Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link></li>
               <li><Link to="/agb" className="hover:text-primary transition-colors">AGB</Link></li>
+              <li><a href="#contact" className="hover:text-primary transition-colors">Kontakt</a></li>
             </ul>
+          </div>
+        </div>
+
+        {/* Emergency Notice */}
+        <div className="mb-8 p-4 bg-ekg-coral/10 rounded-xl border border-ekg-coral/20">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-ekg-coral flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-muted-foreground">
+              <strong className="text-foreground">Bei akuten Beschwerden, Brustschmerz oder Luftnot</strong> bitte umgehend <strong className="text-ekg-coral">112</strong> wählen. 
+              Diese Website ersetzt keine Notfallversorgung.
+            </p>
           </div>
         </div>
 
@@ -53,7 +66,6 @@ const Footer = () => {
               © {new Date().getFullYear()} EKG Jetzt. Alle Rechte vorbehalten.
             </p>
             <p className="text-xs text-muted-foreground">
-              Bei Notfällen: <strong className="text-ekg-coral">112</strong> • 
               Diese Website ersetzt keine ärztliche Untersuchung vor Ort.
             </p>
           </div>
