@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
@@ -8,6 +8,7 @@ import ekgJetztLogo from "@/assets/ekg-jetzt-logo.png";
 const NavigationHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
@@ -29,14 +30,22 @@ const NavigationHeader = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const services = [
+    { label: "Smartwatch-EKG Analyse", href: "/leistungen/smartwatch-ekg" },
+    { label: "Ärztliche Zweitmeinung", href: "/leistungen/zweitmeinung" },
+    { label: "Video-Sprechstunde", href: "/leistungen/videosprechstunde" },
+  ];
+
   const navItems = [
-    { label: "Über mich", id: "about" },
-    { label: "Leistungen", id: "services" },
-    { label: "So funktioniert's", id: "how-it-works" },
-    { label: "FAQ", id: "faq" },
-    { label: "Herzgesundheit", id: "herzgesundheit", isPage: true },
-    { label: "Blog", id: "blog", isPage: true },
-    { label: "Herzschlag-Club", id: "herzschlagclub", isPage: true },
+    { label: "Über mich", id: "about", isScroll: true },
+    { label: "So funktioniert's", id: "how-it-works", isScroll: true },
+    { label: "FAQ", id: "faq", isScroll: true },
+  ];
+
+  const pageLinks = [
+    { label: "Herzgesundheit", href: "/herzgesundheit" },
+    { label: "Blog", href: "/blog" },
+    { label: "Herzschlag-Club", href: "/herzschlagclub" },
   ];
 
   return (
@@ -60,30 +69,72 @@ const NavigationHeader = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
+            {/* Leistungen Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors py-2"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Leistungen
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div 
+                className={cn(
+                  "absolute top-full left-0 pt-2 transition-all duration-200",
+                  isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                )}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[220px]">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      to={service.href}
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-secondary hover:text-primary transition-colors"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Scroll Links */}
             {navItems.map((item) => (
-              item.isPage ? (
-                <Link
-                  key={item.id}
-                  to={`/${item.id}`}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <button
-                  key={item.id}
-                  onClick={() => scrollTo(item.id)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </button>
-              )
+              <button
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                {item.label}
+              </button>
             ))}
+
+            {/* Page Links */}
+            {pageLinks.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Kontakt */}
+            <Link
+              to="/kontakt"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Kontakt
+            </Link>
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button 
               onClick={() => scrollTo("contact")}
               className="rounded-full"
@@ -94,7 +145,7 @@ const NavigationHeader = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -107,28 +158,60 @@ const NavigationHeader = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <nav className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                item.isPage ? (
-                  <Link
-                    key={item.id}
-                    to={`/${item.id}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-left px-4 py-3 text-foreground hover:bg-secondary rounded-lg transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollTo(item.id)}
-                    className="text-left px-4 py-3 text-foreground hover:bg-secondary rounded-lg transition-colors"
-                  >
-                    {item.label}
-                  </button>
-                )
+          <div className="lg:hidden py-4 border-t border-border bg-background">
+            <nav className="flex flex-col gap-1">
+              {/* Leistungen Section */}
+              <div className="px-4 py-2">
+                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  Leistungen
+                </span>
+              </div>
+              {services.map((service) => (
+                <Link
+                  key={service.href}
+                  to={service.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-6 py-2 text-foreground hover:bg-secondary transition-colors"
+                >
+                  {service.label}
+                </Link>
               ))}
+
+              <div className="border-t border-border my-2" />
+
+              {/* Scroll Links */}
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollTo(item.id)}
+                  className="text-left px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+
+              <div className="border-t border-border my-2" />
+
+              {/* Page Links */}
+              {pageLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <Link
+                to="/kontakt"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+              >
+                Kontakt
+              </Link>
+
               <div className="pt-2 px-4">
                 <Button 
                   onClick={() => scrollTo("contact")}

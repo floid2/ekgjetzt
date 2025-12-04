@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Watch, Zap, Gauge, Users, Dumbbell, Apple, Heart, Newspaper, Calendar, ArrowRight } from "lucide-react";
 import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const categories = [
   { name: "Smartwatch & EKG", slug: "smartwatch-ekg", icon: Watch, color: "text-blue-600", bgColor: "bg-blue-100" },
@@ -47,6 +48,11 @@ const articles = [
 const Blog = () => {
   return (
     <>
+      <SEOHead 
+        title="Blog"
+        description="Aktuelle Studien und medizinisches Wissen aus der Kardiologie, verständlich erklärt. News zu Smartwatch-EKG, Herzrhythmusstörungen und Prävention."
+        canonical="/blog"
+      />
       <NavigationHeader />
       <main className="min-h-screen pt-24 pb-16">
         {/* Hero */}

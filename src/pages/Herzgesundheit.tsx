@@ -3,6 +3,7 @@ import { Heart, Activity, AlertTriangle, Stethoscope, Zap, Gauge, Dumbbell, Appl
 import { Button } from "@/components/ui/button";
 import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const topics = [
   {
@@ -88,8 +89,22 @@ const topics = [
 ];
 
 const Herzgesundheit = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Herzgesundheit - EKGJetzt",
+    "description": "Fundiertes Wissen über Herzgesundheit von einer Fachärztin für Kardiologie.",
+    "medicalAudience": "Patient"
+  };
+
   return (
     <>
+      <SEOHead 
+        title="Herzgesundheit"
+        description="Alles über Herzgesundheit: Anatomie, Risikofaktoren, Erkrankungen, Rhythmusstörungen und mehr. Verständlich erklärt von einer Kardiologin."
+        canonical="/herzgesundheit"
+        schema={schema}
+      />
       <NavigationHeader />
       <main className="min-h-screen pt-24 pb-16">
         {/* Hero */}
