@@ -1,4 +1,5 @@
 import { Heart, Award, BookOpen, Stethoscope } from "lucide-react";
+import drSuwelackImg from "@/assets/dr-suwelack.png";
 
 const AboutSection = () => {
   const credentials = [
@@ -36,16 +37,12 @@ const AboutSection = () => {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-ekg-gold/10 rounded-full blur-xl" />
               
               {/* Main Image Container */}
-              <div className="relative bg-gradient-to-br from-muted to-muted/50 rounded-2xl aspect-square overflow-hidden border border-border">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Heart className="w-12 h-12 text-primary/40" />
-                    </div>
-                    <p className="text-muted-foreground">Professionelles Foto</p>
-                    <p className="text-sm text-muted-foreground/60">Dr. Rebekka Suwelack</p>
-                  </div>
-                </div>
+              <div className="relative bg-gradient-to-br from-muted to-muted/50 rounded-2xl overflow-hidden border border-border">
+                <img 
+                  src={drSuwelackImg} 
+                  alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie"
+                  className="w-full h-auto object-cover"
+                />
               </div>
 
               {/* Quote Card */}
