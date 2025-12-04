@@ -1,30 +1,24 @@
-import { Upload, FileSearch, MessageCircle, CheckCircle } from "lucide-react";
+import { Upload, FileSearch, FileCheck, AlertTriangle } from "lucide-react";
 
 const HowItWorksSection = () => {
   const steps = [
     {
       number: "01",
       icon: <Upload className="w-6 h-6" />,
-      title: "Daten hochladen",
+      title: "Unterlagen hochladen",
       description: "Laden Sie Ihr Smartwatch-EKG oder Ihre Befunde sicher über unser Formular hoch.",
     },
     {
       number: "02",
       icon: <FileSearch className="w-6 h-6" />,
-      title: "Analyse",
+      title: "Fachärztliche Auswertung",
       description: "Dr. Suwelack analysiert Ihre Daten persönlich und erstellt eine fundierte Einschätzung.",
     },
     {
       number: "03",
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Befund erhalten",
+      icon: <FileCheck className="w-6 h-6" />,
+      title: "Befund & Empfehlung erhalten",
       description: "Sie erhalten Ihren Befund per E-Mail — verständlich formuliert mit klaren Empfehlungen.",
-    },
-    {
-      number: "04",
-      icon: <CheckCircle className="w-6 h-6" />,
-      title: "Klarheit haben",
-      description: "Mit dem Befund können Sie beruhigt sein oder gezielt den nächsten Schritt planen.",
     },
   ];
 
@@ -36,20 +30,20 @@ const HowItWorksSection = () => {
             So funktioniert's
           </span>
           <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
-            In 4 Schritten zur Klarheit
+            Wie funktioniert EKGJetzt?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Einfach, schnell und sicher — von der Anfrage bis zum Befund
+            In 3 einfachen Schritten zu Ihrem Befund
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Desktop Timeline */}
           <div className="hidden md:block relative">
             {/* Connection Line */}
-            <div className="absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-ekg-coral to-ekg-gold" />
+            <div className="absolute top-16 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-primary via-ekg-coral to-ekg-gold" />
             
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-3 gap-8">
               {steps.map((step, idx) => (
                 <div key={idx} className="relative text-center">
                   {/* Step Circle */}
@@ -86,6 +80,16 @@ const HowItWorksSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Emergency Notice */}
+          <div className="mt-12 p-4 bg-ekg-coral/10 rounded-xl border border-ekg-coral/20 text-center">
+            <div className="flex items-center justify-center gap-3">
+              <AlertTriangle className="w-5 h-5 text-ekg-coral flex-shrink-0" />
+              <p className="text-sm text-muted-foreground">
+                <strong className="text-foreground">Dieser Service ersetzt keine Notfallversorgung.</strong> Bei akuten Beschwerden bitte <strong className="text-ekg-coral">112</strong> wählen.
+              </p>
+            </div>
           </div>
         </div>
       </div>

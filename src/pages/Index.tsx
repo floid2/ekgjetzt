@@ -1,12 +1,14 @@
 import NavigationHeader from "@/components/NavigationHeader";
 import HeroSection from "@/components/HeroSection";
-import ProblemSection from "@/components/ProblemSection";
-import AboutSection from "@/components/AboutSection";
+import WhyEKGJetztSection from "@/components/WhyEKGJetztSection";
 import ServicesSection from "@/components/ServicesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import TrustSection from "@/components/TrustSection";
-import MembershipSection from "@/components/MembershipSection";
+import ForWhomSection from "@/components/ForWhomSection";
+import AboutSection from "@/components/AboutSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import SecuritySection from "@/components/SecuritySection";
 import FAQSection from "@/components/FAQSection";
+import HerzschlagClubTeaser from "@/components/HerzschlagClubTeaser";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -16,17 +18,21 @@ const Index = () => {
       <NavigationHeader />
       <main className="min-h-screen">
         <HeroSection />
-        <ProblemSection />
-        <AboutSection />
+        <WhyEKGJetztSection />
         <ServicesSection />
         <div id="how-it-works">
           <HowItWorksSection />
         </div>
-        <TrustSection />
-        <MembershipSection />
+        <ForWhomSection />
+        <div id="about">
+          <AboutSection />
+        </div>
+        <TestimonialsSection />
+        <SecuritySection />
         <div id="faq">
           <FAQSection />
         </div>
+        <HerzschlagClubTeaser />
         <ContactSection />
       </main>
       <Footer />
