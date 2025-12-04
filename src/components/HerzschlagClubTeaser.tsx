@@ -13,17 +13,16 @@ const HerzschlagClubTeaser = () => {
           </div>
           
           <h2 className="text-2xl md:text-3xl font-serif mb-4 text-foreground">
-            Regelmäßige telekardiologische Begleitung
+            ❤️ Neu: Der Herzschlag-Club
           </h2>
           
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            Monatliche oder quartalsweise Checks, priorisierte Antworten und ein persönlicher 
-            Gesundheitsplan – für alle, die ihr Herz langfristig im Blick behalten möchten.
+            Regelmäßige telekardiologische Betreuung für alle, die ihre Herzgesundheit langfristig im Blick behalten möchten – inklusive monatlicher Checks und persönlicher Empfehlungen.
           </p>
           
           <Button asChild variant="outline" className="rounded-full group">
             <Link to="/herzschlagclub">
-              Mehr erfahren
+              Mehr über den Herzschlag-Club erfahren
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>

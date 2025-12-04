@@ -6,19 +6,19 @@ const HowItWorksSection = () => {
       number: "01",
       icon: <Upload className="w-6 h-6" />,
       title: "Unterlagen hochladen",
-      description: "Laden Sie Ihr Smartwatch-EKG oder Ihre Befunde sicher über unser Formular hoch.",
+      description: "EKG oder Befunde sicher über unser Formular übermitteln.",
     },
     {
       number: "02",
       icon: <FileSearch className="w-6 h-6" />,
       title: "Fachärztliche Auswertung",
-      description: "Dr. Suwelack analysiert Ihre Daten persönlich und erstellt eine fundierte Einschätzung.",
+      description: "Die Analyse erfolgt persönlich durch Dr. med. Rebekka Suwelack, Fachärztin für Innere Medizin und Kardiologie.",
     },
     {
       number: "03",
       icon: <FileCheck className="w-6 h-6" />,
       title: "Befund & Empfehlung erhalten",
-      description: "Sie erhalten Ihren Befund per E-Mail — verständlich formuliert mit klaren Empfehlungen.",
+      description: "Innerhalb von 24–48h erhalten Sie eine klare, verständliche Einschätzung.",
     },
   ];
 
@@ -30,11 +30,8 @@ const HowItWorksSection = () => {
             So funktioniert's
           </span>
           <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
-            Wie funktioniert EKGJetzt?
+            So funktioniert EKGJetzt
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            In 3 einfachen Schritten zu Ihrem Befund
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -87,7 +84,7 @@ const HowItWorksSection = () => {
             <div className="flex items-center justify-center gap-3">
               <AlertTriangle className="w-5 h-5 text-ekg-coral flex-shrink-0" />
               <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Dieser Service ersetzt keine Notfallversorgung.</strong> Bei akuten Beschwerden bitte <strong className="text-ekg-coral">112</strong> wählen.
+                <strong className="text-foreground">EKGJetzt ersetzt keine Notfallversorgung.</strong> Bei akuten Symptomen wählen Sie bitte <strong className="text-ekg-coral">112</strong>.
               </p>
             </div>
           </div>

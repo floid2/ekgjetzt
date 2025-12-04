@@ -1,4 +1,4 @@
-import { Watch, FileText, Video, Check, ArrowRight, AlertTriangle } from "lucide-react";
+import { Watch, FileText, Video, Check, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
@@ -96,13 +96,13 @@ const ServicesSection = () => {
       tier: "Good",
       title: "Smartwatch-EKG Analyse",
       price: "39",
-      description: "Für Apple Watch, Samsung, Garmin etc. – Ihre Smartwatch-EKG professionell ausgewertet.",
+      description: "Perfekt, wenn Ihre Smartwatch (Apple, Samsung, Garmin oder andere EKG-fähige Geräte) Auffälligkeiten meldet oder Sie ein EKG zur Sicherheit bewerten lassen möchten.",
       features: [
-        "Upload des EKGs (PDF oder Screenshot)",
-        "Fachärztliche Interpretation",
+        "Upload Ihres Smartwatch-EKGs",
+        "Fachärztliche Interpretation der Kurven",
         "Einschätzung: unauffällig / kontrollbedürftig / abklärungsbedürftig",
-        "Ergebnis in 24–48h",
-        "Klare Handlungsempfehlung",
+        "Handlungsempfehlungen",
+        "Befund in 24–48h",
       ],
       icon: <Watch className="w-7 h-7" />,
       color: "teal" as const,
@@ -112,13 +112,13 @@ const ServicesSection = () => {
       tier: "Better",
       title: "Ärztliche Zweitmeinung",
       price: "69",
-      description: "Strukturierte Zweitmeinung zu Ihren bestehenden Herzbefunden.",
+      description: "Optimal, wenn Sie einen Arztbrief, einen EKG-Bericht oder andere medizinische Unterlagen besser verstehen möchten – oder wenn Sie verschiedene, widersprüchliche Einschätzungen erhalten haben.",
       features: [
-        "Upload von Arztbrief, EKG-Bericht, Entlassungsbrief",
-        "Strukturierte Zweitmeinung durch Kardiologin",
-        "Einordnung der bisherigen Diagnose",
-        "Empfehlung zum weiteren Vorgehen",
-        "Befund innerhalb 24–48h",
+        "Upload Ihrer Befunde (Arztbrief, EKG, MRT/CT-Bericht, Entlassungsbrief)",
+        "Strukturierte ärztliche Zweitmeinung",
+        "Erklärung der Diagnose & der medizinischen Zusammenhänge",
+        "Empfehlung der nächsten sinnvollen Schritte",
+        "Möglichkeit für kurze Rückfragen per E-Mail",
       ],
       icon: <FileText className="w-7 h-7" />,
       color: "coral" as const,
@@ -128,13 +128,13 @@ const ServicesSection = () => {
       tier: "Best",
       title: "Video-Sprechstunde",
       price: "99",
-      description: "Persönliches Gespräch mit Dr. Suwelack per zertifizierter Videosprechstunde.",
+      description: "Für alle, die ihre Beschwerden und Sorgen direkt und persönlich mit einer Fachärztin besprechen möchten – schnell, vertrauensvoll und digital.",
       features: [
-        "20 Minuten Video-Konsultation",
-        "Besprechung von Beschwerden & Befunden",
-        "Raum für Ihre Rückfragen",
-        "Konkrete Empfehlung für nächste Schritte",
-        "Schriftliche Zusammenfassung",
+        "Zertifizierte Videosprechstunde",
+        "Besprechung Ihrer Beschwerden & Befunde",
+        "Medizinische Orientierung & Handlungsempfehlungen",
+        "Raum für Rückfragen",
+        "Keine Wartezeiten",
       ],
       icon: <Video className="w-7 h-7" />,
       color: "gold" as const,
@@ -153,17 +153,17 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-background to-secondary/30">
+    <section id="services" className="py-24 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container px-4">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Leistungen
           </span>
           <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
-            Unsere Services
+            Unsere telekardiologischen Leistungen
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Drei Wege zur kardiologischen Expertise — passend zu Ihrem Anliegen
+            Wählen Sie die Leistung, die am besten zu Ihrer aktuellen Situation passt.
           </p>
         </div>
 
@@ -179,12 +179,8 @@ const ServicesSection = () => {
 
         {/* Self-Payer Note */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground mb-4">
-            Selbstzahlerleistungen — nähere Informationen in den FAQ.
-          </p>
-          <p className="text-xs text-muted-foreground">
-            Alle Preise inkl. MwSt. • Sichere Zahlung via Stripe • 
-            <span className="text-primary"> 100% vertraulich & DSGVO-konform</span>
+          <p className="text-sm text-muted-foreground">
+            Es handelt sich um Selbstzahlerleistungen. Details zur möglichen Erstattung finden Sie in unseren FAQ.
           </p>
         </div>
       </div>
