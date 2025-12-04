@@ -2,16 +2,18 @@ import { Check } from "lucide-react";
 
 const ForWhomSection = () => {
   const targetGroups = [
-    "Smartwatch meldet Herzrhythmus- oder EKG-Auffälligkeiten",
-    "Herzstolpern, Herzrasen, unruhiger Puls",
-    "Unklare oder widersprüchliche Herzbefunde",
-    "Wunsch nach unabhängiger Zweitmeinung",
-    "Beruflich stark eingespannt, wenig Zeit für Arztbesuche",
-    "Im Ausland / auf Reisen, aber Einschätzung aus Deutschland gewünscht",
+    "Ihre Smartwatch zeigt Auffälligkeiten an",
+    "Sie spüren Herzrasen, Herzstolpern oder einen unregelmäßigen Puls",
+    "Sie möchten ein EKG sicher einordnen",
+    "Sie möchten eine bestehende Diagnose besser verstehen",
+    "Sie haben verschiedene Meinungen erhalten und wünschen sich Klarheit",
+    "Sie möchten medizinische Orientierung ohne Wartezeit",
+    "Sie sind beruflich oder privat stark eingespannt",
+    "Sie benötigen im Ausland eine Einschätzung aus Deutschland",
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-secondary/30">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -19,7 +21,7 @@ const ForWhomSection = () => {
               Zielgruppe
             </span>
             <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
-              Für wen ist EKGJetzt geeignet?
+              Für wen ist EKGJetzt besonders geeignet?
             </h2>
           </div>
 

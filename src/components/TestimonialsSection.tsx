@@ -5,19 +5,19 @@ const TestimonialsSection = () => {
     {
       name: "Rudolf",
       location: "Freiburg",
-      text: "Meine Apple Watch zeigte plötzlich Vorhofflimmern an. Dr. Suwelack hat das EKG innerhalb von 24 Stunden analysiert und mir klare Empfehlungen gegeben. Sehr professionell und beruhigend!",
+      text: "Die Einschätzung war schnell, gut nachvollziehbar und hat mir die Angst genommen.",
       rating: 5,
     },
     {
       name: "Christa",
       location: "Geldern",
-      text: "Endlich eine Kardiologin, die sich Zeit nimmt und verständlich erklärt. Die Video-Sprechstunde war sehr angenehm und ich wusste danach genau, was zu tun ist.",
+      text: "Ich verstehe endlich meinen Arztbericht. Die Zweitmeinung war Gold wert.",
       rating: 5,
     },
     {
       name: "Helmut",
       location: "Allgäu",
-      text: "Als Selbstständiger habe ich wenig Zeit für lange Wartezeiten beim Arzt. Die schnelle Online-Analyse meines EKGs war genau das Richtige. Absolut empfehlenswert!",
+      text: "Sehr kompetent und freundlich! Die Rückmeldung kam viel schneller als gedacht.",
       rating: 5,
     },
   ];
@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
             Erfahrungen
           </span>
           <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
-            Das sagen unsere Patienten
+            Erfahrungen unserer Patient:innen
           </h2>
         </div>
 
@@ -49,11 +49,11 @@ const TestimonialsSection = () => {
               </div>
               
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                "{testimonial.text}"
+                „{testimonial.text}"
               </p>
               
               <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
+                <p className="font-semibold text-foreground">– {testimonial.name}</p>
                 <p className="text-sm text-muted-foreground">aus {testimonial.location}</p>
               </div>
             </div>

@@ -1,42 +1,53 @@
-import { Stethoscope, Clock, MonitorSmartphone, Shield } from "lucide-react";
+import { Stethoscope, Clock, MonitorSmartphone, Shield, Scale } from "lucide-react";
 
 const WhyEKGJetztSection = () => {
   const benefits = [
     {
       icon: <Stethoscope className="w-7 h-7" />,
       title: "Fachärztliche Auswertung",
-      description: "Analyse durch erfahrene Kardiologin mit über 10 Jahren klinischer Erfahrung",
+      description: "Alle Befunde werden ausschließlich von einer approbierten Fachärztin für Kardiologie analysiert.",
     },
     {
       icon: <Clock className="w-7 h-7" />,
       title: "Schnelle Klarheit in 24–48h",
-      description: "Keine wochenlangen Wartezeiten – Sie erhalten Ihren Befund zeitnah",
+      description: "Sie erhalten zeitnah eine präzise, strukturierte Einschätzung.",
     },
     {
       icon: <MonitorSmartphone className="w-7 h-7" />,
-      title: "Rein online, ohne Wartezimmer",
-      description: "Bequem von zuhause – flexibel und zeitsparend",
+      title: "Einfach & vollständig online",
+      description: "Unterlagen sicher hochladen – Befund per E-Mail erhalten.",
     },
     {
       icon: <Shield className="w-7 h-7" />,
       title: "Sicher & DSGVO-konform",
-      description: "Ihre Daten sind verschlüsselt und werden auf EU-Servern gespeichert",
+      description: "Datenübertragung verschlüsselt, Speicherung ausschließlich in der EU.",
+    },
+    {
+      icon: <Scale className="w-7 h-7" />,
+      title: "Unabhängige ärztliche Zweitmeinung",
+      description: "Ideal bei Unsicherheiten, unklaren Befunden oder unterschiedlichen Einschätzungen von Ärzt:innen.",
     },
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-20 bg-background">
       <div className="container px-4">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Ihre Vorteile
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-serif mb-6 text-foreground">
             Warum EKGJetzt?
           </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Herzbeschwerden oder Warnmeldungen Ihrer Smartwatch können verunsichern – ganz besonders dann, wenn ein Arztbericht unklar formuliert ist oder verschiedene Meinungen im Raum stehen.
+          </p>
+          <p className="text-muted-foreground max-w-3xl mx-auto mt-4 leading-relaxed">
+            EKGJetzt bietet Ihnen schnelle, fachärztliche Orientierung. Ob Sie ein Smartwatch-EKG analysieren lassen möchten, Ihre Symptome besser verstehen wollen oder eine unabhängige ärztliche Zweitmeinung brauchen: Hier erhalten Sie Klarheit innerhalb von 24–48 Stunden, ohne Wartezimmer, ohne Stress und vollkommen digital.
+          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {benefits.map((benefit, idx) => (
             <div 
               key={idx}
