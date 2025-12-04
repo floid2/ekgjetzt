@@ -34,6 +34,7 @@ const NavigationHeader = () => {
     { label: "Leistungen", id: "services" },
     { label: "So funktioniert's", id: "how-it-works" },
     { label: "FAQ", id: "faq" },
+    { label: "Herzgesundheit", id: "herzgesundheit", isPage: true },
     { label: "Herzschlag-Club", id: "herzschlagclub", isPage: true },
   ];
 

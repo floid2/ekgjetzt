@@ -35,6 +35,17 @@ const App = () => (
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
           <Route path="/herzschlagclub" element={<HerzschlagClub />} />
+          <Route path="/herzgesundheit" element={<Herzgesundheit />} />
+          <Route path="/herzgesundheit/anatomie" element={<Anatomie />} />
+          <Route path="/herzgesundheit/fakten" element={<Fakten />} />
+          <Route path="/herzgesundheit/risikofaktoren" element={<Risikofaktoren />} />
+          <Route path="/herzgesundheit/erkrankungen" element={<Erkrankungen />} />
+          <Route path="/herzgesundheit/rhythmusstoerungen" element={<Rhythmusstoerungen />} />
+          <Route path="/herzgesundheit/bluthochdruck" element={<Bluthochdruck />} />
+          <Route path="/herzgesundheit/sport" element={<Sport />} />
+          <Route path="/herzgesundheit/ernaehrung" element={<Ernaehrung />} />
+          <Route path="/herzgesundheit/frauenherzen" element={<Frauenherzen />} />
+          <Route path="/herzgesundheit/studien" element={<Studien />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
