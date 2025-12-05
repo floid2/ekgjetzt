@@ -42,17 +42,13 @@ const HerzgesundheitLayout = ({ children, title }: HerzgesundheitLayoutProps) =>
                 Haben Sie Fragen zu Ihrer Herzgesundheit?
               </h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="rounded-full">
-                  <Link to="/#contact">
-                    <Upload className="w-4 h-4 mr-2" />
-                    EKG hochladen
-                  </Link>
+                <Button className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank")}>
+                  <Upload className="w-4 h-4 mr-2" />
+                  EKG hochladen
                 </Button>
-                <Button asChild variant="outline" className="rounded-full">
-                  <Link to="/#contact">
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Zweitmeinung anfordern
-                  </Link>
+                <Button variant="outline" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank")}>
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Zweitmeinung anfordern
                 </Button>
               </div>
             </div>
