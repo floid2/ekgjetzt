@@ -92,17 +92,13 @@ const BlogArticleLayout = ({
                 Lassen Sie Ihr EKG von einer erfahrenen Kardiologin beurteilen oder holen Sie eine unabhängige Zweitmeinung ein.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="rounded-full">
-                  <Link to="/#contact">
-                    <Upload className="w-4 h-4 mr-2" />
-                    EKG jetzt hochladen
-                  </Link>
+                <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank")}>
+                  <Upload className="w-4 h-4 mr-2" />
+                  EKG jetzt hochladen
                 </Button>
-                <Button asChild variant="outline" size="lg" className="rounded-full">
-                  <Link to="/#contact">
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Zweitmeinung anfordern
-                  </Link>
+                <Button variant="outline" size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank")}>
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Zweitmeinung anfordern
                 </Button>
               </div>
             </div>

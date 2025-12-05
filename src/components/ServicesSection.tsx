@@ -148,7 +148,9 @@ const ServicesSection = () => {
     if (service === "Video-Sprechstunde") {
       window.open("https://calendly.com/ekgjetzt-info/20min", "_blank");
     } else if (service === "Smartwatch-EKG Analyse") {
-      window.open("https://n8n.avantic.de/form/565070bc-9ed8-402a-bde9-8097a193774c", "_blank");
+      window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank");
+    } else if (service === "Ärztliche Zweitmeinung") {
+      window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank");
     } else {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }

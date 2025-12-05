@@ -57,11 +57,9 @@ const Zweitmeinung = () => {
               <span className="text-4xl font-bold text-primary">79 €</span>
               <span className="text-muted-foreground">einmalig</span>
             </div>
-            <Button asChild size="lg" className="rounded-full">
-              <Link to="/#contact">
-                <MessageSquare className="w-4 h-4 mr-2" />
-                Zweitmeinung anfordern
-              </Link>
+            <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank")}>
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Zweitmeinung anfordern
             </Button>
           </div>
 
@@ -178,11 +176,9 @@ const Zweitmeinung = () => {
               Lassen Sie Ihre Befunde von einer unabhängigen Fachärztin einschätzen 
               und treffen Sie informierte Entscheidungen über Ihre Gesundheit.
             </p>
-            <Button asChild size="lg" className="rounded-full">
-              <Link to="/#contact">
-                <MessageSquare className="w-4 h-4 mr-2" />
-                Zweitmeinung anfordern – 79 €
-              </Link>
+            <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank")}>
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Zweitmeinung anfordern – 79 €
             </Button>
           </div>
         </div>
