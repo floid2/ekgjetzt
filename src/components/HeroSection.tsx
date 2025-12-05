@@ -145,7 +145,7 @@ const HeroSection = () => {
           </div>
 
           {/* Explanatory text */}
-          <p className="text-center text-[#4F4F4F] text-sm mt-8 max-w-3xl mx-auto">
+          <p className="text-center text-muted-foreground text-lg md:text-xl mt-10 max-w-3xl mx-auto">
             Schnelle fachärztliche Orientierung – ob Smartwatch-EKG, unklare Beschwerden oder eine unabhängige ärztliche Zweitmeinung.
           </p>
         </div>

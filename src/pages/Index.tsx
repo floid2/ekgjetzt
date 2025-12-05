@@ -1,6 +1,5 @@
 import NavigationHeader from "@/components/NavigationHeader";
 import HeroSection from "@/components/HeroSection";
-import MiniTeaserSection from "@/components/MiniTeaserSection";
 import WhyEKGJetztSection from "@/components/WhyEKGJetztSection";
 import ServicesSection from "@/components/ServicesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
@@ -40,7 +39,6 @@ const Index = () => {
       <NavigationHeader />
       <main className="min-h-screen">
         <HeroSection />
-        <MiniTeaserSection />
         <WhyEKGJetztSection />
         <ServicesSection />
         <div id="how-it-works">
