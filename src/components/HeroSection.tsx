@@ -1,4 +1,5 @@
-import { Heart, Shield, Clock, Award, Watch, MonitorSmartphone, Stethoscope } from "lucide-react";
+import { Heart, Shield, Clock, Award, Watch, FileCheck, Video } from "lucide-react";
+import { Link } from "react-router-dom";
 import EKGLine from "./EKGLine";
 import { Button } from "./ui/button";
 
@@ -38,29 +39,7 @@ const HeroSection = () => {
             Smartwatch-EKG auffällig? Holen Sie sich jetzt eine fundierte ärztliche Einschätzung.
           </p>
 
-          {/* Hero Icons - Smartwatch, Laptop, Doctor */}
-          <div className="flex items-center justify-center gap-6 md:gap-10 mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <Watch className="w-8 h-8 md:w-10 md:h-10 text-primary" />
-              </div>
-              <span className="text-xs text-muted-foreground">Smartwatch</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <MonitorSmartphone className="w-8 h-8 md:w-10 md:h-10 text-primary" />
-              </div>
-              <span className="text-xs text-muted-foreground">Upload</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <Stethoscope className="w-8 h-8 md:w-10 md:h-10 text-primary" />
-              </div>
-              <span className="text-xs text-muted-foreground">Befund</span>
-            </div>
-          </div>
-
-          <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.2s" }}>
+          <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.15s" }}>
             <li className="flex items-start gap-3 text-muted-foreground text-body">
               <span className="text-primary font-bold text-lg">✓</span>
               <span>Befund in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
@@ -110,6 +89,63 @@ const HeroSection = () => {
               <span>DSGVO-konform</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Services Quick Access Section */}
+      <div className="relative z-10 py-12 md:py-16 bg-[#F4FAF8]">
+        <div className="container px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Smartwatch-EKG Analyse */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <Watch className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
+                <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">Smartwatch-EKG Analyse</h3>
+                <p className="text-[#4F4F4F] text-sm mb-4">Fundierte ärztliche Einschätzung Ihrer Uhr-EKGs.</p>
+                <Link 
+                  to="/leistungen/smartwatch-ekg"
+                  className="text-primary border border-primary rounded-full px-4 py-2 text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+                >
+                  Mehr erfahren
+                </Link>
+              </div>
+            </div>
+
+            {/* Ärztliche Zweitmeinung */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <FileCheck className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
+                <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">Ärztliche Zweitmeinung</h3>
+                <p className="text-[#4F4F4F] text-sm mb-4">Unabhängige Beurteilung vorhandener Befunde.</p>
+                <Link 
+                  to="/leistungen/zweitmeinung"
+                  className="text-primary border border-primary rounded-full px-4 py-2 text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+                >
+                  Mehr erfahren
+                </Link>
+              </div>
+            </div>
+
+            {/* Video-Sprechstunde */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <Video className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
+                <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">Video-Sprechstunde</h3>
+                <p className="text-[#4F4F4F] text-sm mb-4">Persönliche Beratung durch eine Kardiologin.</p>
+                <Link 
+                  to="/leistungen/videosprechstunde"
+                  className="text-primary border border-primary rounded-full px-4 py-2 text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+                >
+                  Mehr erfahren
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Explanatory text */}
+          <p className="text-center text-[#4F4F4F] text-sm mt-8 max-w-3xl mx-auto">
+            Schnelle fachärztliche Orientierung – ob Smartwatch-EKG, unklare Beschwerden oder eine unabhängige ärztliche Zweitmeinung.
+          </p>
         </div>
       </div>
     </section>
