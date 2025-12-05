@@ -80,7 +80,7 @@ const ServiceCard = ({ tier, title, price, description, features, icon, color, r
       </ul>
       
       <Button 
-        className={cn("w-full rounded-button group", styles.button)}
+        className={cn("w-full group", styles.button)}
         size="lg"
         onClick={onSelect}
       >
