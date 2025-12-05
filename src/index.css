@@ -6,78 +6,94 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 30% 15%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
-
-    --primary: 173 58% 39%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 30% 95%;
-    --secondary-foreground: 220 30% 15%;
-
-    --muted: 210 20% 93%;
-    --muted-foreground: 220 15% 45%;
-
-    --accent: 350 80% 60%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 173 58% 39%;
-
-    --radius: 0.75rem;
-
-    /* Custom EKG colors */
-    --ekg-teal: 173 58% 39%;
-    --ekg-teal-light: 173 50% 92%;
-    --ekg-navy: 220 50% 20%;
-    --ekg-coral: 350 80% 60%;
-    --ekg-gold: 45 90% 55%;
-    --ekg-mint: 160 40% 90%;
+    /* EKGJetzt Design System - Professional Medical Aesthetic */
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(173 58% 39%) 0%, hsl(200 60% 45%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(350 80% 60%) 0%, hsl(20 90% 60%) 100%);
+    /* Primary Colors */
+    --primary: 217 86% 52%;           /* EKG-Blue #1F6FEB */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 86% 42%;     /* Darker blue for hover */
+    
+    /* Accent Colors */
+    --accent: 354 69% 53%;            /* Heart-Red #D93644 - use sparingly */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Success/Feedback Colors */
+    --success: 145 63% 49%;           /* Soft Green #2ECC71 */
+    --success-foreground: 0 0% 100%;
+    --warning: 43 87% 61%;            /* Amber Yellow #F2C744 */
+    --warning-foreground: 0 0% 10%;
+    
+    /* Neutral Colors */
+    --background: 0 0% 100%;          /* Pure White */
+    --foreground: 0 0% 10%;           /* Dark Gray #1A1A1A */
+    
+    --card: 0 0% 98%;                 /* Off-White #FAFAFA */
+    --card-foreground: 0 0% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    
+    --secondary: 0 0% 96%;            /* Light Gray background */
+    --secondary-foreground: 0 0% 10%;
+    
+    --muted: 0 0% 91%;                /* Light Gray #E8E8E8 */
+    --muted-foreground: 0 0% 35%;     /* Mid Gray #5A5A5A */
+    
+    --destructive: 354 69% 53%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 217 86% 52%;
+    
+    --radius: 0.625rem;               /* 10px rounded corners */
+    
+    /* EKG Brand Colors */
+    --ekg-blue: 217 86% 52%;
+    --ekg-blue-light: 217 86% 95%;
+    --ekg-red: 354 69% 53%;
+    --ekg-green: 145 63% 49%;
+    --ekg-amber: 43 87% 61%;
+    --ekg-navy: 220 50% 20%;
+    
+    /* Section backgrounds for alternating */
+    --section-white: 0 0% 100%;
+    --section-offwhite: 0 0% 98%;
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 8px 24px -4px rgba(0, 0, 0, 0.12);
+    --shadow-button: 0 2px 4px -1px rgba(31, 111, 235, 0.2);
   }
 
   .dark {
     --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
+    --foreground: 0 0% 95%;
 
     --card: 220 30% 12%;
-    --card-foreground: 210 20% 95%;
+    --card-foreground: 0 0% 95%;
 
     --popover: 220 30% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 173 58% 45%;
+    --primary: 217 86% 58%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 30% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary-foreground: 0 0% 95%;
 
     --muted: 220 25% 20%;
-    --muted-foreground: 210 15% 60%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 350 80% 60%;
+    --accent: 354 69% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 354 69% 45%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 220 25% 20%;
     --input: 220 25% 20%;
-    --ring: 173 58% 45%;
+    --ring: 217 86% 58%;
   }
 }
 
@@ -90,47 +106,102 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3 {
-    @apply font-serif;
+  /* Typography Scale */
+  h1 {
+    @apply font-serif text-4xl md:text-5xl font-semibold tracking-tight text-foreground;
   }
 
-  /* Prose typography improvements */
+  h2 {
+    @apply font-serif text-3xl md:text-4xl font-semibold text-foreground;
+  }
+
+  h3 {
+    @apply font-serif text-2xl font-medium text-foreground;
+  }
+
+  h4 {
+    @apply font-sans text-xl font-medium text-foreground;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Prose typography for content pages */
   .prose h2 {
-    @apply text-2xl md:text-3xl font-serif font-medium mt-10 mb-4 text-foreground;
+    @apply text-2xl md:text-3xl font-serif font-semibold mt-12 mb-5 text-foreground;
   }
 
   .prose h3 {
-    @apply text-xl md:text-2xl font-serif font-medium mt-8 mb-3 text-foreground;
+    @apply text-xl md:text-2xl font-serif font-medium mt-10 mb-4 text-foreground;
   }
 
   .prose h4 {
-    @apply text-lg md:text-xl font-serif font-medium mt-6 mb-2 text-foreground;
+    @apply text-lg md:text-xl font-sans font-medium mt-8 mb-3 text-foreground;
   }
 
   .prose p {
-    @apply text-base md:text-lg leading-relaxed mb-5 text-muted-foreground;
+    @apply text-base md:text-lg leading-relaxed mb-6 text-muted-foreground;
   }
 
   .prose ul, .prose ol {
-    @apply my-4 pl-6;
+    @apply my-5 pl-6 space-y-2;
   }
 
   .prose li {
-    @apply text-base md:text-lg leading-relaxed mb-2 text-muted-foreground;
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
   }
 
   .prose strong {
     @apply text-foreground font-semibold;
   }
+
+  .prose a {
+    @apply text-primary hover:underline;
+  }
+}
+
+@layer components {
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Card styles */
+  .card-medical {
+    @apply bg-card rounded-[10px] p-6 md:p-8 shadow-[var(--shadow-card)] transition-all duration-300 hover:shadow-[var(--shadow-card-hover)];
+  }
+
+  /* Info boxes */
+  .info-box {
+    @apply bg-[hsl(var(--ekg-blue-light))] border border-primary/20 rounded-[10px] p-5 md:p-6;
+  }
+
+  .warning-box {
+    @apply bg-amber-50 border border-amber-200 rounded-[10px] p-5 md:p-6;
+  }
+
+  .danger-box {
+    @apply bg-red-50 border border-red-200 rounded-[10px] p-5 md:p-6;
+  }
+
+  /* Badge styles */
+  .badge-recommended {
+    @apply inline-flex items-center px-3 py-1 rounded-full bg-[hsl(var(--success))] text-white text-sm font-medium;
+  }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(200,60%,45%)];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(217,86%,62%)];
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1;
   }
 
   .animate-float {
@@ -147,6 +218,19 @@
 
   .animate-fade-in {
     animation: fade-in 0.5s ease-out forwards;
+  }
+
+  /* Spacing utilities for medical layout */
+  .gap-section {
+    @apply gap-20 md:gap-28;
+  }
+
+  .mt-section {
+    @apply mt-20 md:mt-28;
+  }
+
+  .mb-section {
+    @apply mb-20 md:mb-28;
   }
 }
 

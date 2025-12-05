@@ -25,39 +25,39 @@ const SecuritySection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="section-padding bg-background">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-12 md:mb-14">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Datenschutz
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
+            <h2 className="text-h2 font-serif mb-4 text-foreground">
               Ihre medizinischen Daten sind geschützt
             </h2>
           </div>
 
-          <div className="bg-card rounded-2xl p-10 border border-border shadow-lg">
-            <div className="grid sm:grid-cols-2 gap-8">
+          <div className="bg-card rounded-card p-8 md:p-10 border border-border shadow-card">
+            <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
               {securityFeatures.slice(0, 4).map((feature, idx) => (
                 <div 
                   key={idx}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-card bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
                     {feature.icon}
                   </div>
-                  <p className="text-foreground font-medium">{feature.text}</p>
+                  <p className="text-foreground font-medium text-body">{feature.text}</p>
                 </div>
               ))}
             </div>
             {/* Fifth item centered below */}
             <div className="flex justify-center mt-8 pt-8 border-t border-border">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-card bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
                   {securityFeatures[4].icon}
                 </div>
-                <p className="text-foreground font-medium">{securityFeatures[4].text}</p>
+                <p className="text-foreground font-medium text-body">{securityFeatures[4].text}</p>
               </div>
             </div>
           </div>

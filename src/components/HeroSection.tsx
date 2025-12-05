@@ -8,11 +8,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-ekg-mint/20">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-ekg-coral/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-success/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="container relative z-10 px-4 py-20 pt-32">
@@ -29,44 +29,44 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 animate-slide-up text-foreground leading-tight">
+          <h1 className="text-h1 md:text-display font-serif mb-6 animate-slide-up text-foreground leading-tight">
             Ihr Herz schlägt –
             <span className="text-primary block">wir hören hin.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-slide-up max-w-xl mx-auto" style={{ animationDelay: "0.1s" }}>
+          <p className="text-body-lg text-muted-foreground mb-8 animate-slide-up max-w-xl mx-auto" style={{ animationDelay: "0.1s" }}>
             Smartwatch-EKG auffällig? Holen Sie sich jetzt eine fundierte ärztliche Einschätzung.
           </p>
 
-          <ul className="space-y-2 mb-8 animate-slide-up inline-block text-left" style={{ animationDelay: "0.2s" }}>
-            <li className="flex items-start gap-2 text-muted-foreground">
-              <span className="text-primary font-bold">✓</span>
+          <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.2s" }}>
+            <li className="flex items-start gap-3 text-muted-foreground text-body">
+              <span className="text-primary font-bold text-lg">✓</span>
               <span>Befund in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
             </li>
-            <li className="flex items-start gap-2 text-muted-foreground">
-              <span className="text-primary font-bold">✓</span>
+            <li className="flex items-start gap-3 text-muted-foreground text-body">
+              <span className="text-primary font-bold text-lg">✓</span>
               <span>Bequem online – <strong className="text-foreground">ohne Wartezimmer</strong></span>
             </li>
-            <li className="flex items-start gap-2 text-muted-foreground">
-              <span className="text-primary font-bold">✓</span>
+            <li className="flex items-start gap-3 text-muted-foreground text-body">
+              <span className="text-primary font-bold text-lg">✓</span>
               <span>Sicher, verständlich und <strong className="text-foreground">DSGVO-konform</strong></span>
             </li>
           </ul>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-10 animate-slide-up justify-center" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up justify-center" style={{ animationDelay: "0.3s" }}>
             <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+              size="xl" 
+              className="rounded-button w-full sm:w-auto"
               onClick={scrollToServices}
             >
-            <Heart className="w-5 h-5 mr-2" />
-            Jetzt EKG prüfen lassen
+              <Heart className="w-5 h-5 mr-2" />
+              Jetzt EKG prüfen lassen
             </Button>
             <Button 
               variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-6 rounded-full"
+              size="xl" 
+              className="rounded-button w-full sm:w-auto"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Über Dr. Suwelack

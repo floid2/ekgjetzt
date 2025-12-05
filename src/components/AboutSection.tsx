@@ -22,18 +22,18 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="section-padding bg-background">
       <div className="container px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image Side */}
           <div className="relative">
             <div className="relative">
               {/* Decorative elements */}
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-xl" />
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-ekg-gold/10 rounded-full blur-xl" />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-warning/10 rounded-full blur-xl" />
               
               {/* Main Image Container */}
-              <div className="relative bg-gradient-to-br from-muted to-muted/50 rounded-2xl overflow-hidden border border-border">
+              <div className="relative bg-gradient-to-br from-muted to-muted/50 rounded-card overflow-hidden border border-border">
                 <img 
                   src={drSuwelackImg} 
                   alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie"
@@ -45,15 +45,15 @@ const AboutSection = () => {
 
           {/* Content Side */}
           <div>
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Ihre Kardiologin
             </span>
             
-            <h2 className="text-3xl md:text-4xl font-serif mb-6 text-foreground">
+            <h2 className="text-h2 font-serif mb-6 text-foreground">
               Ihre Ärztin: Dr. med. Rebekka Suwelack
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-body-lg text-muted-foreground mb-8 leading-relaxed">
               Dr. Suwelack ist Fachärztin für Innere Medizin und Kardiologie und verfügt über mehr als zehn Jahre Erfahrung in Klinik und Praxis. Ihr Schwerpunkt liegt auf Herzrhythmusstörungen, EKG-Diagnostik, Telemedizin und der persönlichen, verständlichen Begleitung von Patient:innen mit Herzbeschwerden.
             </p>
 
@@ -62,12 +62,12 @@ const AboutSection = () => {
               {credentials.map((cred, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50 border border-border/50"
+                  className="flex items-center gap-4 p-4 rounded-card bg-secondary/50 border border-border/50"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-card bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
                     {cred.icon}
                   </div>
-                  <p className="text-muted-foreground">{cred.text}</p>
+                  <p className="text-body text-muted-foreground">{cred.text}</p>
                 </div>
               ))}
             </div>

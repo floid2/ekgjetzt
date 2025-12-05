@@ -34,13 +34,13 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section id="faq" className="section-padding bg-secondary/50">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             Häufige Fragen
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
+          <h2 className="text-h2 font-serif mb-4 text-foreground">
             Häufige Fragen
           </h2>
         </div>
@@ -51,12 +51,12 @@ const FAQSection = () => {
               <AccordionItem 
                 key={idx} 
                 value={`item-${idx}`}
-                className="bg-card rounded-xl border border-border px-6 data-[state=open]:border-primary/30"
+                className="bg-card rounded-card border border-border px-6 data-[state=open]:border-primary/30 shadow-card"
               >
-                <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary hover:no-underline py-5">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary hover:no-underline py-5 text-body">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
+                <AccordionContent className="text-muted-foreground pb-5 text-body">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
