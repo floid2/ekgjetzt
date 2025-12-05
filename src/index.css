@@ -6,19 +6,19 @@
 
 @layer base {
   :root {
-    /* EKGJetzt Design System - Professional Medical Aesthetic */
+    /* EKGJetzt Design System - Warm Medical Teal Aesthetic */
     
-    /* Primary Colors */
-    --primary: 217 86% 52%;           /* EKG-Blue #1F6FEB */
+    /* Primary Colors - Teal-Med */
+    --primary: 170 60% 43%;           /* Teal-Med #2BAF9E */
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 217 86% 42%;     /* Darker blue for hover */
+    --primary-hover: 170 60% 34%;     /* Darker teal for hover #238B7D */
     
     /* Accent Colors */
-    --accent: 354 69% 53%;            /* Heart-Red #D93644 - use sparingly */
+    --accent: 0 64% 56%;              /* Warm Red #D84848 - for warnings */
     --accent-foreground: 0 0% 100%;
     
     /* Success/Feedback Colors */
-    --success: 145 63% 49%;           /* Soft Green #2ECC71 */
+    --success: 170 60% 43%;           /* Same as primary for consistency */
     --success-foreground: 0 0% 100%;
     --warning: 43 87% 61%;            /* Amber Yellow #F2C744 */
     --warning-foreground: 0 0% 10%;
@@ -33,37 +33,41 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
     
-    --secondary: 0 0% 96%;            /* Light Gray background */
+    --secondary: 165 35% 96%;         /* Very light mint tint */
     --secondary-foreground: 0 0% 10%;
     
     --muted: 0 0% 91%;                /* Light Gray #E8E8E8 */
     --muted-foreground: 0 0% 35%;     /* Mid Gray #5A5A5A */
     
-    --destructive: 354 69% 53%;
+    --destructive: 0 64% 56%;         /* #D84848 */
     --destructive-foreground: 0 0% 100%;
     
     --border: 0 0% 91%;
     --input: 0 0% 91%;
-    --ring: 217 86% 52%;
+    --ring: 170 60% 43%;
     
     --radius: 0.625rem;               /* 10px rounded corners */
     
-    /* EKG Brand Colors */
-    --ekg-blue: 217 86% 52%;
-    --ekg-blue-light: 217 86% 95%;
-    --ekg-red: 354 69% 53%;
-    --ekg-green: 145 63% 49%;
+    /* EKG Brand Colors - Updated to Teal */
+    --ekg-teal: 170 60% 43%;
+    --ekg-teal-light: 165 35% 93%;    /* #E7F5F3 */
+    --ekg-red: 0 64% 56%;
+    --ekg-green: 170 60% 43%;
     --ekg-amber: 43 87% 61%;
     --ekg-navy: 220 50% 20%;
     
+    /* Hero gradient */
+    --hero-gradient-start: 165 35% 93%;  /* #E7F5F3 */
+    --hero-gradient-end: 0 0% 100%;      /* #FFFFFF */
+    
     /* Section backgrounds for alternating */
     --section-white: 0 0% 100%;
-    --section-offwhite: 0 0% 98%;
+    --section-offwhite: 165 35% 98%;     /* Very subtle mint tint */
     
-    /* Shadows */
+    /* Shadows - Updated with teal tint */
     --shadow-card: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
     --shadow-card-hover: 0 8px 24px -4px rgba(0, 0, 0, 0.12);
-    --shadow-button: 0 2px 4px -1px rgba(31, 111, 235, 0.2);
+    --shadow-button: 0 2px 4px -1px rgba(43, 175, 158, 0.25);
   }
 
   .dark {
@@ -76,7 +80,7 @@
     --popover: 220 30% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 217 86% 58%;
+    --primary: 170 60% 48%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 30% 18%;
@@ -85,15 +89,15 @@
     --muted: 220 25% 20%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 354 69% 58%;
+    --accent: 0 64% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 354 69% 45%;
+    --destructive: 0 64% 50%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 220 25% 20%;
     --input: 220 25% 20%;
-    --ring: 217 86% 58%;
+    --ring: 170 60% 48%;
   }
 }
 
@@ -178,7 +182,7 @@
 
   /* Info boxes */
   .info-box {
-    @apply bg-[hsl(var(--ekg-blue-light))] border border-primary/20 rounded-[10px] p-5 md:p-6;
+    @apply bg-[hsl(var(--ekg-teal-light))] border border-primary/20 rounded-[10px] p-5 md:p-6;
   }
 
   .warning-box {
@@ -197,7 +201,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(217,86%,62%)];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(170,60%,53%)];
   }
 
   .card-hover {
