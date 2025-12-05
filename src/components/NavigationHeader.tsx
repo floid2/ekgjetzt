@@ -133,11 +133,9 @@ const NavigationHeader = () => {
             </Link>
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:block">
             <Button 
               onClick={() => scrollTo("contact")}
-              className="rounded-button"
             >
               Jetzt anfragen
             </Button>
@@ -215,7 +213,7 @@ const NavigationHeader = () => {
               <div className="pt-4 px-4">
                 <Button 
                   onClick={() => scrollTo("contact")}
-                  className="w-full rounded-button"
+                  className="w-full"
                 >
                   Jetzt anfragen
                 </Button>

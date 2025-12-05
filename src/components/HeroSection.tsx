@@ -56,8 +56,8 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up justify-center" style={{ animationDelay: "0.3s" }}>
             <Button 
-              size="xl" 
-              className="rounded-button w-full sm:w-auto"
+              size="lg" 
+              className="w-full sm:w-auto"
               onClick={scrollToServices}
             >
               <Heart className="w-5 h-5 mr-2" />
@@ -65,8 +65,8 @@ const HeroSection = () => {
             </Button>
             <Button 
               variant="outline" 
-              size="xl" 
-              className="rounded-button w-full sm:w-auto"
+              size="lg" 
+              className="w-full sm:w-auto"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Über Dr. Suwelack
