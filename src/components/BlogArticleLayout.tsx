@@ -78,7 +78,7 @@ const BlogArticleLayout = ({
           </header>
 
           {/* Content */}
-          <div className="max-w-3xl mx-auto prose prose-lg prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
+          <div className="max-w-3xl mx-auto prose prose-lg">
             {children}
           </div>
 
