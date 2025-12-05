@@ -1,6 +1,9 @@
 import { Heart, Shield, Clock, Award } from "lucide-react";
 import EKGLine from "./EKGLine";
 import { Button } from "./ui/button";
+import heroSmartwatch from "@/assets/hero-smartwatch.png";
+import heroLaptop from "@/assets/hero-laptop.png";
+import drSuwelackHero from "@/assets/dr-suwelack-hero.png";
 
 const HeroSection = () => {
   const scrollToServices = () => {
@@ -16,7 +19,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 px-4 py-20 pt-32">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in">
             <Shield className="w-4 h-4" />
@@ -37,6 +40,25 @@ const HeroSection = () => {
           <p className="text-body-lg text-muted-foreground mb-8 animate-slide-up max-w-xl mx-auto" style={{ animationDelay: "0.1s" }}>
             Smartwatch-EKG auffällig? Holen Sie sich jetzt eine fundierte ärztliche Einschätzung.
           </p>
+
+          {/* Hero Images - Smartwatch, Laptop, Doctor */}
+          <div className="flex items-end justify-center gap-4 md:gap-8 mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+            <img 
+              src={heroSmartwatch} 
+              alt="Smartwatch mit EKG-Anzeige" 
+              className="w-24 md:w-36 lg:w-44 h-auto object-contain drop-shadow-lg"
+            />
+            <img 
+              src={heroLaptop} 
+              alt="Laptop mit EKG-Auswertung" 
+              className="w-40 md:w-56 lg:w-72 h-auto object-contain drop-shadow-lg"
+            />
+            <img 
+              src={drSuwelackHero} 
+              alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie" 
+              className="w-24 md:w-36 lg:w-44 h-auto object-contain drop-shadow-lg"
+            />
+          </div>
 
           <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.2s" }}>
             <li className="flex items-start gap-3 text-muted-foreground text-body">
