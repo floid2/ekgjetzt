@@ -56,7 +56,7 @@ const ServiceCard = ({ tier, title, price, description, features, icon, color, r
         </div>
       )}
       
-      <div className={cn("w-14 h-14 rounded-card flex items-center justify-center mb-6", styles.icon)}>
+      <div className={cn("w-20 h-20 rounded-card flex items-center justify-center mb-6", styles.icon)}>
         {icon}
       </div>
       
@@ -105,7 +105,7 @@ const ServicesSection = () => {
         "Handlungsempfehlungen",
         "Befund in 24–48h",
       ],
-      icon: <Watch className="w-7 h-7" />,
+      icon: <Watch className="w-10 h-10" />,
       color: "blue" as const,
       ctaText: "EKG jetzt hochladen",
     },
@@ -121,7 +121,7 @@ const ServicesSection = () => {
         "Empfehlung der nächsten sinnvollen Schritte",
         "Möglichkeit für kurze Rückfragen per E-Mail",
       ],
-      icon: <FileText className="w-7 h-7" />,
+      icon: <FileText className="w-10 h-10" />,
       color: "green" as const,
       ctaText: "Zweitmeinung anfordern",
       recommended: true,
@@ -138,7 +138,7 @@ const ServicesSection = () => {
         "Raum für Rückfragen",
         "Keine Wartezeiten",
       ],
-      icon: <Video className="w-7 h-7" />,
+      icon: <Video className="w-10 h-10" />,
       color: "amber" as const,
       ctaText: "Video-Termin buchen",
     },
