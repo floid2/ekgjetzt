@@ -56,7 +56,7 @@ const HeroSection = () => {
             <img 
               src={drSuwelackHero} 
               alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie" 
-              className="w-32 md:w-48 lg:w-64 h-auto object-contain drop-shadow-lg"
+              className="w-40 md:w-60 lg:w-80 h-auto object-contain drop-shadow-lg -mb-4"
             />
           </div>
 
