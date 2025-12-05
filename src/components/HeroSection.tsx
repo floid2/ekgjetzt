@@ -1,9 +1,6 @@
-import { Heart, Shield, Clock, Award } from "lucide-react";
+import { Heart, Shield, Clock, Award, Watch, MonitorSmartphone, Stethoscope } from "lucide-react";
 import EKGLine from "./EKGLine";
 import { Button } from "./ui/button";
-import heroSmartwatch from "@/assets/hero-smartwatch.png";
-import heroLaptop from "@/assets/hero-laptop.png";
-import drSuwelackHero from "@/assets/dr-suwelack-hero.png";
 
 const HeroSection = () => {
   const scrollToServices = () => {
@@ -41,23 +38,26 @@ const HeroSection = () => {
             Smartwatch-EKG auffällig? Holen Sie sich jetzt eine fundierte ärztliche Einschätzung.
           </p>
 
-          {/* Hero Images - Smartwatch, Laptop, Doctor */}
-          <div className="flex items-end justify-center gap-2 md:gap-6 mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
-            <img 
-              src={heroSmartwatch} 
-              alt="Smartwatch mit EKG-Anzeige" 
-              className="w-20 md:w-28 lg:w-36 h-auto object-contain drop-shadow-lg"
-            />
-            <img 
-              src={heroLaptop} 
-              alt="Laptop mit EKG-Auswertung" 
-              className="w-36 md:w-48 lg:w-64 h-auto object-contain drop-shadow-lg"
-            />
-            <img 
-              src={drSuwelackHero} 
-              alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie" 
-              className="w-48 md:w-72 lg:w-96 h-auto object-contain drop-shadow-lg -mb-6"
-            />
+          {/* Hero Icons - Smartwatch, Laptop, Doctor */}
+          <div className="flex items-center justify-center gap-6 md:gap-10 mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <Watch className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              </div>
+              <span className="text-xs text-muted-foreground">Smartwatch</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <MonitorSmartphone className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              </div>
+              <span className="text-xs text-muted-foreground">Upload</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <Stethoscope className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              </div>
+              <span className="text-xs text-muted-foreground">Befund</span>
+            </div>
           </div>
 
           <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.2s" }}>
