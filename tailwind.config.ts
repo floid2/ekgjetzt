@@ -71,8 +71,8 @@ export default {
           foreground: "hsl(var(--warning-foreground))",
         },
         ekg: {
-          blue: "hsl(var(--ekg-blue))",
-          "blue-light": "hsl(var(--ekg-blue-light))",
+          teal: "hsl(var(--ekg-teal))",
+          "teal-light": "hsl(var(--ekg-teal-light))",
           red: "hsl(var(--ekg-red))",
           green: "hsl(var(--ekg-green))",
           amber: "hsl(var(--ekg-amber))",
