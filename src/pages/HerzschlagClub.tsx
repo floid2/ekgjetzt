@@ -250,9 +250,9 @@ const HerzschlagClub = () => {
                   <Button 
                     className={`w-full rounded-full text-base py-5 ${
                       tier.color === "coral" 
-                        ? "bg-ekg-coral hover:bg-ekg-coral/90 text-white" 
+                        ? "bg-primary hover:bg-primary/90 text-primary-foreground" 
                         : tier.color === "gold"
-                        ? "bg-ekg-gold hover:bg-ekg-gold/90 text-white"
+                        ? "bg-primary hover:bg-primary/90 text-primary-foreground"
                         : "bg-primary hover:bg-primary/90 text-primary-foreground"
                     }`}
                   >
