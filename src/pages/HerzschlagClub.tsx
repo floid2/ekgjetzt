@@ -157,11 +157,11 @@ const HerzschlagClub = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="rounded-full bg-ekg-coral hover:bg-ekg-coral/90 text-white px-8 py-6 text-lg">
+                <Button size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg">
                   <Heart className="w-5 h-5 mr-2" />
                   Mitglied werden
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg" asChild>
+                <Button variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                   <a href="#why">Mehr erfahren</a>
                 </Button>
               </div>
