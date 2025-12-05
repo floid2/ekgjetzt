@@ -53,7 +53,7 @@ const NavigationHeader = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-card"
           : "bg-transparent"
       )}
     >
@@ -73,7 +73,7 @@ const NavigationHeader = () => {
             {/* Leistungen Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors py-2"
+                className="flex items-center gap-1 text-body text-muted-foreground hover:text-primary transition-colors py-2"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
@@ -88,12 +88,12 @@ const NavigationHeader = () => {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[220px]">
+                <div className="bg-background border border-border rounded-card shadow-card-hover py-2 min-w-[220px]">
                   {services.map((service) => (
                     <Link
                       key={service.href}
                       to={service.href}
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-secondary hover:text-primary transition-colors"
+                      className="block px-4 py-3 text-body text-foreground hover:bg-secondary hover:text-primary transition-colors"
                     >
                       {service.label}
                     </Link>
@@ -107,7 +107,7 @@ const NavigationHeader = () => {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="text-body text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </button>
@@ -118,7 +118,7 @@ const NavigationHeader = () => {
               <Link
                 key={item.href}
                 to={item.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="text-body text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </Link>
@@ -127,7 +127,7 @@ const NavigationHeader = () => {
             {/* Kontakt */}
             <Link
               to="/kontakt"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="text-body text-muted-foreground hover:text-primary transition-colors"
             >
               Kontakt
             </Link>
@@ -137,7 +137,7 @@ const NavigationHeader = () => {
           <div className="hidden lg:block">
             <Button 
               onClick={() => scrollTo("contact")}
-              className="rounded-full"
+              className="rounded-button"
             >
               Jetzt anfragen
             </Button>
@@ -171,7 +171,7 @@ const NavigationHeader = () => {
                   key={service.href}
                   to={service.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-6 py-2 text-foreground hover:bg-secondary transition-colors"
+                  className="px-6 py-3 text-body text-foreground hover:bg-secondary transition-colors"
                 >
                   {service.label}
                 </Link>
@@ -184,7 +184,7 @@ const NavigationHeader = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="text-left px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                  className="text-left px-4 py-3 text-body text-foreground hover:bg-secondary transition-colors"
                 >
                   {item.label}
                 </button>
@@ -198,7 +198,7 @@ const NavigationHeader = () => {
                   key={item.href}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                  className="px-4 py-3 text-body text-foreground hover:bg-secondary transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -207,15 +207,15 @@ const NavigationHeader = () => {
               <Link
                 to="/kontakt"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                className="px-4 py-3 text-body text-foreground hover:bg-secondary transition-colors"
               >
                 Kontakt
               </Link>
 
-              <div className="pt-2 px-4">
+              <div className="pt-4 px-4">
                 <Button 
                   onClick={() => scrollTo("contact")}
-                  className="w-full rounded-full"
+                  className="w-full rounded-button"
                 >
                   Jetzt anfragen
                 </Button>

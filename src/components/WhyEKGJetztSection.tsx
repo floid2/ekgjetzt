@@ -30,19 +30,19 @@ const WhyEKGJetztSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="section-padding-sm bg-background">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             Ihre Vorteile
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif mb-6 text-foreground">
+          <h2 className="text-h2 font-serif mb-6 text-foreground">
             Warum EKGJetzt?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Herzbeschwerden oder Warnmeldungen Ihrer Smartwatch können verunsichern – ganz besonders dann, wenn ein Arztbericht unklar formuliert ist oder verschiedene Meinungen im Raum stehen.
           </p>
-          <p className="text-muted-foreground max-w-3xl mx-auto mt-4 leading-relaxed">
+          <p className="text-body text-muted-foreground max-w-3xl mx-auto mt-4 leading-relaxed">
             EKGJetzt bietet Ihnen schnelle, fachärztliche Orientierung. Ob Sie ein Smartwatch-EKG analysieren lassen möchten, Ihre Symptome besser verstehen wollen oder eine unabhängige ärztliche Zweitmeinung brauchen: Hier erhalten Sie Klarheit innerhalb von 24–48 Stunden, ohne Wartezimmer, ohne Stress und vollkommen digital.
           </p>
         </div>
@@ -51,13 +51,13 @@ const WhyEKGJetztSection = () => {
           {benefits.map((benefit, idx) => (
             <div 
               key={idx}
-              className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card rounded-card p-6 border border-border shadow-card hover:shadow-card-hover transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-card bg-primary/10 text-primary flex items-center justify-center mb-5">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{benefit.title}</h3>
-              <p className="text-sm text-muted-foreground">{benefit.description}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{benefit.title}</h3>
+              <p className="text-body text-muted-foreground">{benefit.description}</p>
             </div>
           ))}
         </div>

@@ -27,27 +27,27 @@ const TestimonialsSection = () => {
 
   const initialColors = {
     R: "bg-primary/10 text-primary",
-    C: "bg-ekg-coral/10 text-ekg-coral",
-    H: "bg-ekg-gold/10 text-ekg-gold",
+    C: "bg-success/10 text-success",
+    H: "bg-warning/10 text-warning",
   };
 
   return (
-    <section className="py-28 bg-secondary/30">
+    <section className="section-padding bg-secondary/50">
       <div className="container px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             Erfahrungen
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-foreground">
+          <h2 className="text-h2 font-serif mb-4 text-foreground">
             Erfahrungen unserer Patient:innen
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow relative"
+              className="bg-card rounded-card p-6 md:p-8 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 relative"
             >
               <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/10" />
               
@@ -63,11 +63,11 @@ const TestimonialsSection = () => {
               
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-ekg-gold text-ekg-gold" />
+                  <Star key={i} className="w-4 h-4 fill-warning text-warning" />
                 ))}
               </div>
               
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-body leading-relaxed">
                 „{testimonial.text}"
               </p>
             </div>
