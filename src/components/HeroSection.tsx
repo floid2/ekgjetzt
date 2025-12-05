@@ -42,21 +42,21 @@ const HeroSection = () => {
           </p>
 
           {/* Hero Images - Smartwatch, Laptop, Doctor */}
-          <div className="flex items-end justify-center gap-4 md:gap-8 mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+          <div className="flex items-end justify-center gap-2 md:gap-6 mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
             <img 
               src={heroSmartwatch} 
               alt="Smartwatch mit EKG-Anzeige" 
-              className="w-24 md:w-36 lg:w-44 h-auto object-contain drop-shadow-lg"
+              className="w-20 md:w-28 lg:w-36 h-auto object-contain drop-shadow-lg"
             />
             <img 
               src={heroLaptop} 
               alt="Laptop mit EKG-Auswertung" 
-              className="w-40 md:w-56 lg:w-72 h-auto object-contain drop-shadow-lg"
+              className="w-36 md:w-48 lg:w-64 h-auto object-contain drop-shadow-lg"
             />
             <img 
               src={drSuwelackHero} 
               alt="Dr. med. Rebekka Suwelack - Fachärztin für Kardiologie" 
-              className="w-24 md:w-36 lg:w-44 h-auto object-contain drop-shadow-lg"
+              className="w-32 md:w-48 lg:w-64 h-auto object-contain drop-shadow-lg"
             />
           </div>
 
