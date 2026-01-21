@@ -21,6 +21,7 @@ import Sport from "./pages/herzgesundheit/Sport";
 import Ernaehrung from "./pages/herzgesundheit/Ernaehrung";
 import Frauenherzen from "./pages/herzgesundheit/Frauenherzen";
 import Studien from "./pages/herzgesundheit/Studien";
+import Mikrobiom from "./pages/herzgesundheit/Mikrobiom";
 import Blog from "./pages/Blog";
 import SmartwatchEKGBlog from "./pages/blog/SmartwatchEKG";
 import Vorhofflimmern from "./pages/blog/Vorhofflimmern";
@@ -62,6 +63,7 @@ const App = () => (
             <Route path="/herzgesundheit/ernaehrung" element={<Ernaehrung />} />
             <Route path="/herzgesundheit/frauenherzen" element={<Frauenherzen />} />
             <Route path="/herzgesundheit/studien" element={<Studien />} />
+            <Route path="/herzgesundheit/mikrobiom" element={<Mikrobiom />} />
             {/* Blog */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/smartwatch-ekg-was-zeigt-es" element={<SmartwatchEKGBlog />} />
