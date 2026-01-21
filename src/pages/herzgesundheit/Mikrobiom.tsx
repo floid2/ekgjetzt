@@ -295,7 +295,7 @@ const Mikrobiom = () => {
                 <tbody className="divide-y divide-border">
                   <tr className="hover:bg-secondary/30 transition-colors">
                     <td className="p-4 font-medium">Mikrobiom & Immunsystem</td>
-                    <td className="p-4 text-sm text-muted-foreground">SCFAs aktivieren regulatorische T-Zellen und stärken Barriere-Integrität. Dysbiose korreliert mit erhöhtem Infektionsrisiko.</td>
+                    <td className="p-4 text-sm text-muted-foreground">Kurzkettige Fettsäuren (SCFAs) aktivieren regulatorische T-Zellen und stärken die Darmbarriere. Ein gestörtes Mikrobiom (Dysbiose) korreliert mit erhöhtem Infektionsrisiko.</td>
                     <td className="p-4"><span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">HOCH</span></td>
                   </tr>
                   <tr className="hover:bg-secondary/30 transition-colors">
@@ -332,7 +332,7 @@ const Mikrobiom = () => {
                 <strong>📊 Zusammengefasst:</strong><br />
                 • <strong>400+</strong> Humanstudien belegen Microbiota-Effekte auf Gesundheit<br />
                 • <strong>Starke Evidenz</strong> für Immunsystem, Kognition, Alterung, Stoffwechsel<br />
-                • <strong>Kausalität weitgehend etabliert</strong> (via Mendelian Randomization, FMT-Studien)
+                • <strong>Kausalität weitgehend etabliert</strong> (via genetische Analysen und Stuhltransplantations-Studien)
               </p>
             </div>
           </div>
@@ -358,9 +358,9 @@ const Mikrobiom = () => {
 
                 <div className="space-y-6">
                   <div className="bg-card rounded-xl p-6 border border-green-200">
-                    <h4 className="text-lg font-semibold text-primary mb-3">Präbiotika: Inulin & FOS</h4>
+                    <h4 className="text-lg font-semibold text-primary mb-3">Präbiotika: Inulin & Fructo-Oligosaccharide (FOS)</h4>
                     <p className="text-sm text-muted-foreground mb-2">
-                      <strong className="text-foreground">Wirkmechanismus:</strong> Selektive Nahrung für gute Bifidobacterien. Diese Stämme produzieren Butyrat (bis zu 3x mehr mit Präbiotika-Zusatz).
+                      <strong className="text-foreground">Wirkmechanismus:</strong> Selektive Nahrung für gute Bifidobakterien. Diese Stämme produzieren Butyrat (bis zu 3x mehr mit Präbiotika-Zusatz).
                     </p>
                     <p className="text-sm text-muted-foreground mb-2">
                       <strong className="text-foreground">Lebensmittel:</strong> Chicorée, Artischocken, Knoblauch, Zwiebeln, Spargel, Hafer.
@@ -376,8 +376,8 @@ const Mikrobiom = () => {
                       <strong className="text-foreground">Stämme mit bester Evidenz:</strong>
                     </p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside mb-2 space-y-1">
-                      <li><strong>Lactobacillus plantarum:</strong> Immunfunktion, Darmgesundheit – 12+ RCTs</li>
-                      <li><strong>Bifidobacterium longum:</strong> Immunität, Stimmung, Verdauung – 20+ RCTs</li>
+                      <li><strong>Lactobacillus plantarum:</strong> Immunfunktion, Darmgesundheit – 12+ klinische Studien</li>
+                      <li><strong>Bifidobacterium longum:</strong> Immunität, Stimmung, Verdauung – 20+ klinische Studien</li>
                       <li><strong>Akkermansia muciniphila:</strong> Barriere-Integrität, Gewicht – vielversprechend</li>
                     </ul>
                     <p className="text-sm text-muted-foreground">
@@ -483,9 +483,9 @@ const Mikrobiom = () => {
                 <div className="bg-background rounded-xl p-6 border border-border">
                   <h3 className="text-xl font-semibold text-foreground mb-4">🩸 Blutwerte</h3>
                   <ul className="text-sm text-muted-foreground space-y-2">
-                    <li><strong>Entzündungsmarker:</strong> CRP, IL-6, TNF-α – zeigen chronische Entzündung</li>
-                    <li><strong>Stoffwechsel:</strong> Nüchternglukose, Insulinresistenz-Index, Lipidprofil</li>
-                    <li><strong>Darmbarriere:</strong> Zonula Occludens 1, LPS – zunehmend verfügbar</li>
+                    <li><strong>Entzündungsmarker:</strong> CRP (C-reaktives Protein), Interleukin-6, TNF-α – zeigen chronische Entzündung</li>
+                    <li><strong>Stoffwechsel:</strong> Nüchternglukose, Insulinresistenz-Index, Lipidprofil (Cholesterin, Triglyceride)</li>
+                    <li><strong>Darmbarriere:</strong> Zonulin, Lipopolysaccharide (LPS, Bakterienbestandteile) – zunehmend verfügbar</li>
                   </ul>
                 </div>
 
