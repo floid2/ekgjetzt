@@ -141,8 +141,9 @@ const Ernaehrung = () => {
         <p className="text-sm text-muted-foreground mb-0">
           <strong>Mehr erfahren:</strong> Lesen Sie auch unsere Artikel zu{" "}
           <Link to="/herzgesundheit/risikofaktoren" className="text-primary hover:underline">Risikofaktoren</Link>,{" "}
-          <Link to="/herzgesundheit/bluthochdruck" className="text-primary hover:underline">Bluthochdruck</Link> und{" "}
-          <Link to="/herzgesundheit/sport" className="text-primary hover:underline">Sport & Herz</Link>.
+          <Link to="/herzgesundheit/bluthochdruck" className="text-primary hover:underline">Bluthochdruck</Link>,{" "}
+          <Link to="/herzgesundheit/sport" className="text-primary hover:underline">Sport & Herz</Link> und{" "}
+          <Link to="/herzgesundheit/mikrobiom" className="text-primary hover:underline">Mikrobiom & Verdauung</Link>.
         </p>
       </div>
     </HerzgesundheitLayout>
