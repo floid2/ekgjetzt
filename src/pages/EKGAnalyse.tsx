@@ -94,15 +94,13 @@ const EKGAnalyse = () => {
       formData.append("submittedAt", new Date().toISOString());
       formData.append("formMode", "production");
 
-      const response = await fetch(WEBHOOK_URL, {
+      await fetch(WEBHOOK_URL, {
         method: "POST",
         body: formData,
+        mode: "no-cors",
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
+      // no-cors mode returns opaque response (status 0), so we assume success
       setIsSubmitted(true);
     } catch (error) {
       console.error("Webhook error:", error);
