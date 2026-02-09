@@ -57,7 +57,7 @@ const SmartwatchEKGService = () => {
               <span className="text-4xl font-bold text-primary">39 €</span>
               <span className="text-muted-foreground">einmalig</span>
             </div>
-            <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank")}>
+            <Button size="lg" className="rounded-full" onClick={() => window.location.href = "/ekg-analyse"}>
               <Upload className="w-4 h-4 mr-2" />
               EKG jetzt hochladen
             </Button>
@@ -188,7 +188,7 @@ const SmartwatchEKGService = () => {
               Laden Sie Ihr Smartwatch-EKG hoch und erhalten Sie innerhalb von 48 Stunden 
               eine fundierte Einschätzung.
             </p>
-            <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank")}>
+            <Button size="lg" className="rounded-full" onClick={() => window.location.href = "/ekg-analyse"}>
               <Upload className="w-4 h-4 mr-2" />
               EKG jetzt hochladen – 39 €
             </Button>

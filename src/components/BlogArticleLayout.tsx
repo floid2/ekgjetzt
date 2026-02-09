@@ -92,7 +92,7 @@ const BlogArticleLayout = ({
                 Lassen Sie Ihr EKG von einer erfahrenen Kardiologin beurteilen oder holen Sie eine unabhängige Zweitmeinung ein.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank")}>
+                <Button size="lg" className="rounded-full" onClick={() => window.location.href = "/ekg-analyse"}>
                   <Upload className="w-4 h-4 mr-2" />
                   EKG jetzt hochladen
                 </Button>
