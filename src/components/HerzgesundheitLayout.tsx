@@ -42,7 +42,7 @@ const HerzgesundheitLayout = ({ children, title }: HerzgesundheitLayoutProps) =>
                 Haben Sie Fragen zu Ihrer Herzgesundheit?
               </h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/94987015-4664-45e5-ad42-25d7e5e821c6", "_blank")}>
+                <Button className="rounded-full" onClick={() => window.location.href = "/ekg-analyse"}>
                   <Upload className="w-4 h-4 mr-2" />
                   EKG hochladen
                 </Button>

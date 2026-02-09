@@ -29,6 +29,7 @@ import EisenmangelFrauen from "./pages/blog/EisenmangelFrauen";
 import SmartwatchEKGService from "./pages/leistungen/SmartwatchEKGService";
 import Zweitmeinung from "./pages/leistungen/Zweitmeinung";
 import Videosprechstunde from "./pages/leistungen/Videosprechstunde";
+import EKGAnalyse from "./pages/EKGAnalyse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
             <Route path="/herzschlagclub" element={<HerzschlagClub />} />
             {/* Leistungen */}
             <Route path="/leistungen/smartwatch-ekg" element={<SmartwatchEKGService />} />
+            <Route path="/ekg-analyse" element={<EKGAnalyse />} />
             <Route path="/leistungen/zweitmeinung" element={<Zweitmeinung />} />
             <Route path="/leistungen/videosprechstunde" element={<Videosprechstunde />} />
             {/* Herzgesundheit Hub */}
