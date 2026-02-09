@@ -82,7 +82,7 @@ const EKGAnalyse = () => {
       formData.append("E-Mail-Adresse", (form.elements.namedItem("email") as HTMLInputElement).value);
       formData.append("Geburtsdatum", (form.elements.namedItem("geburtsdatum") as HTMLInputElement).value);
       formData.append("Beschwerden / Symptome", (form.elements.namedItem("beschwerden") as HTMLTextAreaElement).value);
-      formData.append("EKG-Datei hochladen", selectedFile);
+      formData.append("EKG_Datei_hochladen", selectedFile);
       formData.append(
         "Datenschutz & Vertragsbedingungen",
         "Ich habe die Datenschutzerklärung gelesen und willige ein, dass meine personenbezogenen Daten einschließlich Gesundheitsdaten zum Zweck der EKG-Analyse verarbeitet werden."
