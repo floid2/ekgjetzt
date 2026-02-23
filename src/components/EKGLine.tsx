@@ -19,38 +19,40 @@ const EKGLine = ({ className = "" }: { className?: string }) => {
         </clipPath>
       </defs>
       
-      {/* Background trace (faded) */}
-      <path
-        d="M0,25 L30,25 L35,25 L40,25 L45,10 L50,40 L55,5 L60,45 L65,25 L80,25 L100,25 L130,25 L135,25 L140,25 L145,10 L150,40 L155,5 L160,45 L165,25 L180,25 L200,25 L230,25 L235,25 L240,25 L245,10 L250,40 L255,5 L260,45 L265,25 L280,25 L300,25 L330,25 L335,25 L340,25 L345,10 L350,40 L355,5 L360,45 L365,25 L380,25 L400,25"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        opacity="0.2"
-      />
-      
-      {/* Animated drawing line */}
-      <path
-        d="M0,25 L30,25 L35,25 L40,25 L45,10 L50,40 L55,5 L60,45 L65,25 L80,25 L100,25 L130,25 L135,25 L140,25 L145,10 L150,40 L155,5 L160,45 L165,25 L180,25 L200,25 L230,25 L235,25 L240,25 L245,10 L250,40 L255,5 L260,45 L265,25 L280,25 L300,25 L330,25 L335,25 L340,25 L345,10 L350,40 L355,5 L360,45 L365,25 L380,25 L400,25"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        style={{
-          strokeDasharray: 800,
-          strokeDashoffset: 800,
-          animation: "ekg-draw 4s linear infinite"
-        }}
-      />
-      
-      {/* Moving dot */}
-      <circle r="4" fill="currentColor">
-        <animateMotion
-          dur="4s"
-          repeatCount="indefinite"
-          path="M0,25 L30,25 L35,25 L40,25 L45,10 L50,40 L55,5 L60,45 L65,25 L80,25 L100,25 L130,25 L135,25 L140,25 L145,10 L150,40 L155,5 L160,45 L165,25 L180,25 L200,25 L230,25 L235,25 L240,25 L245,10 L250,40 L255,5 L260,45 L265,25 L280,25 L300,25 L330,25 L335,25 L340,25 L345,10 L350,40 L355,5 L360,45 L365,25 L380,25 L400,25"
-        />
-      </circle>
+      {/* Realistic EKG path: P wave, QRS complex, T wave repeated */}
+      {/* Single beat ~100 units: baseline→P wave→PR→QRS→ST→T wave→baseline */}
+      {(() => {
+        const beat = (ox: number) => 
+          `L${ox},25 L${ox+5},25 ` +
+          `C${ox+8},25 ${ox+10},21 ${ox+13},21 C${ox+16},21 ${ox+18},25 ${ox+20},25 ` + // P wave
+          `L${ox+25},25 ` + // PR segment
+          `L${ox+28},27 L${ox+30},25 L${ox+32},8 L${ox+35},42 L${ox+38},25 ` + // QRS
+          `L${ox+42},25 L${ox+48},25 ` + // ST segment
+          `C${ox+52},25 ${ox+55},18 ${ox+58},18 C${ox+61},18 ${ox+64},25 ${ox+68},25 ` + // T wave
+          `L${ox+75},25`;
+        const d = `M0,25 ${beat(0)}${beat(80)}${beat(160)}${beat(240)}${beat(320)} L400,25`;
+        return (
+          <>
+            <path d={d} fill="none" stroke="currentColor" strokeWidth="2" opacity="0.2" />
+            <path
+              d={d}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{
+                strokeDasharray: 1200,
+                strokeDashoffset: 1200,
+                animation: "ekg-draw 4s linear infinite"
+              }}
+            />
+            <circle r="4" fill="currentColor">
+              <animateMotion dur="4s" repeatCount="indefinite" path={d} />
+            </circle>
+          </>
+        );
+      })()}
       
       <style>
         {`
