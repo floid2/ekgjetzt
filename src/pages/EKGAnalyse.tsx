@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-const WEBHOOK_URL = "https://n8n.avantic.de/webhook/7bce7b9e-6111-4674-bb47-6a648b731413";
+const WEBHOOK_URL = "https://n8n.avantic.de/webhook-test/7bce7b9e-6111-4674-bb47-6a648b731413";
 
 const EKGAnalyse = () => {
   const { toast } = useToast();
