@@ -53,6 +53,8 @@ const EKGAnalyse = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (isSubmitting) return;
     
     if (!selectedFile) {
       toast({
@@ -111,6 +113,8 @@ const EKGAnalyse = () => {
     dataTransfer.items.add(selectedFile);
     fileInput.files = dataTransfer.files;
     hiddenForm.appendChild(fileInput);
+
+    setIsSubmitting(true);
 
     document.body.appendChild(hiddenForm);
     hiddenForm.submit();
