@@ -74,6 +74,9 @@ const EKGAnalyse = () => {
       return;
     }
 
+    // Immediately block further submissions
+    setIsSubmitting(true);
+
     // Build a hidden form and submit natively so the browser follows the 302 redirect
     const form = e.target as HTMLFormElement;
     const hiddenForm = document.createElement("form");
@@ -113,8 +116,6 @@ const EKGAnalyse = () => {
     dataTransfer.items.add(selectedFile);
     fileInput.files = dataTransfer.files;
     hiddenForm.appendChild(fileInput);
-
-    setIsSubmitting(true);
 
     document.body.appendChild(hiddenForm);
     hiddenForm.submit();
