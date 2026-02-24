@@ -51,7 +51,7 @@ const EKGAnalyse = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!selectedFile) {
@@ -72,46 +72,48 @@ const EKGAnalyse = () => {
       return;
     }
 
-    setIsSubmitting(true);
+    // Build a hidden form and submit natively so the browser follows the 302 redirect
+    const form = e.target as HTMLFormElement;
+    const hiddenForm = document.createElement("form");
+    hiddenForm.method = "POST";
+    hiddenForm.action = WEBHOOK_URL;
+    hiddenForm.enctype = "multipart/form-data";
+    hiddenForm.style.display = "none";
 
-    try {
-      const formData = new FormData();
-      const form = e.target as HTMLFormElement;
+    const addField = (name: string, value: string) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      hiddenForm.appendChild(input);
+    };
 
-      formData.append("Ihr Name", (form.elements.namedItem("ihrName") as HTMLInputElement).value);
-      formData.append("E-Mail-Adresse", (form.elements.namedItem("email") as HTMLInputElement).value);
-      formData.append("Geburtsdatum", (form.elements.namedItem("geburtsdatum") as HTMLInputElement).value);
-      formData.append("Beschwerden / Symptome", (form.elements.namedItem("beschwerden") as HTMLTextAreaElement).value);
-      formData.append("EKG_Datei_hochladen", selectedFile);
-      formData.append(
-        "Datenschutz & Vertragsbedingungen",
-        "Ich habe die Datenschutzerklärung gelesen und willige ein, dass meine personenbezogenen Daten einschließlich Gesundheitsdaten zum Zweck der EKG-Analyse verarbeitet werden."
-      );
-      formData.append(
-        "Datenschutz & Vertragsbedingungen",
-        "Ich akzeptiere die AGB und bestätige den sofortigen Beginn der Beratung, wodurch das Widerrufsrecht für vollständig erbrachte Leistungen erlischt."
-      );
-      formData.append("submittedAt", new Date().toISOString());
-      formData.append("formMode", "production");
+    addField("Ihr Name", (form.elements.namedItem("ihrName") as HTMLInputElement).value);
+    addField("E-Mail-Adresse", (form.elements.namedItem("email") as HTMLInputElement).value);
+    addField("Geburtsdatum", (form.elements.namedItem("geburtsdatum") as HTMLInputElement).value);
+    addField("Beschwerden / Symptome", (form.elements.namedItem("beschwerden") as HTMLTextAreaElement).value);
+    addField(
+      "Datenschutz & Vertragsbedingungen",
+      "Ich habe die Datenschutzerklärung gelesen und willige ein, dass meine personenbezogenen Daten einschließlich Gesundheitsdaten zum Zweck der EKG-Analyse verarbeitet werden."
+    );
+    addField(
+      "Datenschutz & Vertragsbedingungen",
+      "Ich akzeptiere die AGB und bestätige den sofortigen Beginn der Beratung, wodurch das Widerrufsrecht für vollständig erbrachte Leistungen erlischt."
+    );
+    addField("submittedAt", new Date().toISOString());
+    addField("formMode", "production");
 
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors",
-      });
+    // Append file via DataTransfer
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.name = "EKG_Datei_hochladen";
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(selectedFile);
+    fileInput.files = dataTransfer.files;
+    hiddenForm.appendChild(fileInput);
 
-      // no-cors mode returns opaque response (status 0), so we assume success
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error("Webhook error:", error);
-      toast({
-        title: "Fehler beim Senden",
-        description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns per E-Mail.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
   };
 
   if (isSubmitted) {
