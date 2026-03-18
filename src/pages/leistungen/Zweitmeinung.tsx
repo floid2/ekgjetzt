@@ -11,7 +11,7 @@ const Zweitmeinung = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Ärztliche Zweitmeinung",
-    "description": "Unabhängige fachärztliche Zweitmeinung zu kardiologischen Befunden. Verständliche Einordnung durch eine erfahrene Kardiologin.",
+    "description": "Unabhängige fachärztliche Zweitmeinung zu kardiologischen Unterlagen. Verständliche Einordnung durch eine erfahrene Kardiologin.",
     "provider": {
       "@type": "Physician",
       "name": "Dr. med. Rebekka Suwelack",
