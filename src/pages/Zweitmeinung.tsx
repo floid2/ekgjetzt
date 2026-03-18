@@ -371,9 +371,16 @@ const Zweitmeinung = () => {
                   type="submit"
                   size="lg"
                   className="w-full rounded-full"
+                  disabled={isSubmitting}
                 >
-                  <Upload className="w-4 h-4 mr-2" />
-                  Kostenpflichtig einreichen (69 €)
+                  {isSubmitting ? (
+                    "Wird gesendet..."
+                  ) : (
+                    <>
+                      <Upload className="w-4 h-4 mr-2" />
+                      Kostenpflichtig einreichen (69 €)
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
