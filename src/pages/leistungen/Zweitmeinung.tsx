@@ -50,7 +50,7 @@ const Zweitmeinung = () => {
               Ärztliche Zweitmeinung
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Sie haben einen kardiologischen Befund erhalten und möchten eine unabhängige Einschätzung? 
+              Sie haben kardiologische Unterlagen erhalten und möchten eine unabhängige Einschätzung? 
               Erhalten Sie Klarheit und Sicherheit durch eine erfahrene Fachärztin.
             </p>
             <div className="flex items-center justify-center gap-4 mb-8">
