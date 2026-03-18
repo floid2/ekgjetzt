@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FileCheck, Clock, Shield, CheckCircle, MessageSquare, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavigationHeader from "@/components/NavigationHeader";
