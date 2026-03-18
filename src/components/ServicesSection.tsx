@@ -103,7 +103,7 @@ const ServicesSection = () => {
         "Fachärztliche Interpretation der Kurven",
         "Einschätzung: unauffällig / kontrollbedürftig / abklärungsbedürftig",
         "Handlungsempfehlungen",
-        "Befund in 24–48h",
+        "Ersteinschätzung in 24–48h",
       ],
       icon: <Watch className="w-10 h-10" />,
       color: "blue" as const,
