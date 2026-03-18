@@ -79,7 +79,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground animate-slide-up justify-center" style={{ animationDelay: "0.4s" }}>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
-                <span>Befund in 24-48h</span>
+                <span>Ersteinschätzung in 24-48h</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="w-4 h-4 text-primary" />
