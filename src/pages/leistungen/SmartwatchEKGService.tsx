@@ -11,7 +11,7 @@ const SmartwatchEKGService = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Smartwatch-EKG Analyse",
-    "description": "Professionelle Auswertung Ihres Smartwatch-EKGs durch eine Fachärztin für Kardiologie. Befund innerhalb von 48 Stunden.",
+    "description": "Professionelle Auswertung Ihres Smartwatch-EKGs durch eine Fachärztin für Kardiologie. Ärztliche Ersteinschätzung innerhalb von 48 Stunden.",
     "provider": {
       "@type": "Physician",
       "name": "Dr. med. Rebekka Suwelack",
