@@ -116,9 +116,9 @@ const SmartwatchEKGService = () => {
                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   3
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Befund erhalten</h3>
+                <h3 className="font-semibold text-foreground mb-2">Ersteinschätzung erhalten</h3>
                 <p className="text-sm text-muted-foreground">
-                  Innerhalb von 48 Stunden erhalten Sie Ihren verständlichen Befund per E-Mail.
+                  Innerhalb von 48 Stunden erhalten Sie Ihre verständliche ärztliche Ersteinschätzung per E-Mail.
                 </p>
               </div>
             </div>
