@@ -115,7 +115,7 @@ const ServicesSection = () => {
       price: "69",
       description: "Optimal, wenn Sie einen Arztbrief, einen EKG-Bericht oder andere medizinische Unterlagen besser verstehen möchten – oder wenn Sie verschiedene, widersprüchliche Einschätzungen erhalten haben.",
       features: [
-        "Upload Ihrer Befunde (Arztbrief, EKG, MRT/CT-Bericht, Entlassungsbrief)",
+        "Upload Ihrer Unterlagen (Arztbrief, EKG, MRT/CT-Bericht, Entlassungsbrief)",
         "Strukturierte ärztliche Zweitmeinung",
         "Erklärung der Diagnose & der medizinischen Zusammenhänge",
         "Empfehlung der nächsten sinnvollen Schritte",
