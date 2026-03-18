@@ -123,7 +123,7 @@ const Kontakt = () => {
                     </li>
                     <li>
                       <a href="/leistungen/zweitmeinung" className="text-primary hover:underline">
-                        Ärztliche Zweitmeinung → 79 €
+                        Ärztliche Zweitmeinung → 69 €
                       </a>
                     </li>
                     <li>

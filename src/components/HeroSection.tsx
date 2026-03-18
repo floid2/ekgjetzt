@@ -118,7 +118,7 @@ const HeroSection = () => {
               <div className="flex flex-col items-center text-center">
                 <FileCheck className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
                 <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">Ärztliche Zweitmeinung</h3>
-                <p className="text-[#4F4F4F] text-sm mb-4">Unabhängige Beurteilung vorhandener Befunde.</p>
+                <p className="text-[#4F4F4F] text-sm mb-4">Unabhängige Beurteilung vorhandener Unterlagen.</p>
                 <Link 
                   to="/leistungen/zweitmeinung"
                   className="text-primary border border-primary rounded-full px-4 py-2 text-sm font-medium hover:bg-primary hover:text-white transition-colors"

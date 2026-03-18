@@ -117,7 +117,7 @@ const Zweitmeinung = () => {
             <h2 className="text-2xl font-serif text-foreground text-center mb-8">Das ist im Preis enthalten</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Sichtung aller eingereichten Unterlagen (EKGs, Befunde, Arztbriefe)",
+                "Sichtung aller eingereichten Unterlagen (EKGs, Arztbriefe, Berichte)",
                 "Ausführliche schriftliche Stellungnahme",
                 "Verständliche Erklärung der Diagnose",
                 "Einschätzung der vorgeschlagenen Therapie",

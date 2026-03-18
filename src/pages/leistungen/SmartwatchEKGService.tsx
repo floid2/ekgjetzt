@@ -131,10 +131,10 @@ const SmartwatchEKGService = () => {
               {[
                 "Analyse Ihres Smartwatch-EKGs durch eine Fachärztin",
                 "Einschätzung: unauffällig / kontrollbedürftig / abklärungsbedürftig",
-                "Verständliche Erklärung des Befunds",
+                "Verständliche Erklärung der Ersteinschätzung",
                 "Konkrete Handlungsempfehlung",
                 "Hinweise für das Gespräch mit Ihrem Hausarzt",
-                "Schriftlicher Befund zum Speichern"
+                "Schriftliche ärztliche Ersteinschätzung zum Speichern"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />

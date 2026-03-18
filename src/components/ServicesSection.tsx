@@ -133,7 +133,7 @@ const ServicesSection = () => {
       description: "Für alle, die ihre Beschwerden und Sorgen direkt und persönlich mit einer Fachärztin besprechen möchten – schnell, vertrauensvoll und digital.",
       features: [
         "Zertifizierte Videosprechstunde",
-        "Besprechung Ihrer Beschwerden & Befunde",
+        "Besprechung Ihrer Beschwerden & Unterlagen",
         "Medizinische Orientierung & Handlungsempfehlungen",
         "Raum für Rückfragen",
         "Keine Wartezeiten",

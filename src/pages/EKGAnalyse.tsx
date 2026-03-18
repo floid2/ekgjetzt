@@ -342,7 +342,7 @@ const EKGAnalyse = () => {
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
-                  Sichere Übertragung • DSGVO-konform • Befund in 48h
+                  Sichere Übertragung • DSGVO-konform • Ersteinschätzung in 48h
                 </p>
               </form>
             </div>

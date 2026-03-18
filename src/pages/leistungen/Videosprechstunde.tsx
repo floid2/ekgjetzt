@@ -142,7 +142,7 @@ const Videosprechstunde = () => {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Unterlagen</h3>
                 <p className="text-sm text-muted-foreground">
-                  Sie laden relevante Befunde vorab hoch.
+                  Sie laden relevante Unterlagen vorab hoch.
                 </p>
               </div>
               <div className="text-center">

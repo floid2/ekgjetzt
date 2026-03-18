@@ -25,7 +25,7 @@ const WhyEKGJetztSection = () => {
     {
       icon: <Scale className="w-7 h-7" />,
       title: "Unabhängige ärztliche Zweitmeinung",
-      description: "Ideal bei Unsicherheiten, unklaren Befunden oder unterschiedlichen Einschätzungen von Ärzt:innen.",
+      description: "Ideal bei Unsicherheiten, unklaren Unterlagen oder unterschiedlichen Einschätzungen von Ärzt:innen.",
     },
   ];
 

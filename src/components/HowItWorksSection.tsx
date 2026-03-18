@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
     {
       number: "3",
       icon: <CheckCircle2 className="w-7 h-7" />,
-      title: "Befund & Empfehlung erhalten",
+      title: "Ersteinschätzung & Empfehlung erhalten",
       description: "Innerhalb von 24–48h erhalten Sie eine klare, verständliche Einschätzung.",
       color: "bg-warning/10 text-warning border-warning/20",
       numberColor: "text-warning",

@@ -32,7 +32,7 @@ const Index = () => {
     <>
       <SEOHead 
         title="Fachärztliche Online-Kardiologie"
-        description="Smartwatch-EKG auffällig? Holen Sie sich eine fundierte ärztliche Einschätzung von einer erfahrenen Kardiologin. Befund in 48h, DSGVO-konform."
+        description="Smartwatch-EKG auffällig? Holen Sie sich eine fundierte ärztliche Einschätzung von einer erfahrenen Kardiologin. Ersteinschätzung in 48h, DSGVO-konform."
         canonical="/"
         schema={schema}
       />

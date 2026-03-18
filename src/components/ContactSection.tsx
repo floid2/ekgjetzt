@@ -141,7 +141,7 @@ const ContactSection = () => {
                 <div className="border-2 border-dashed border-border rounded-xl p-6 text-center hover:border-primary/50 transition-colors cursor-pointer">
                   <Upload className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
                   <p className="text-sm text-muted-foreground">
-                    EKG-PDF oder Befund hier ablegen
+                    EKG-PDF oder Unterlagen hier ablegen
                   </p>
                   <p className="text-xs text-muted-foreground/60 mt-1">
                     PDF, JPG, PNG bis 10MB
