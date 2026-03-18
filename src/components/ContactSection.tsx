@@ -59,7 +59,7 @@ const ContactSection = () => {
               Starten Sie jetzt mit Ihrer Anfrage
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Füllen Sie das Formular aus und laden Sie Ihre EKG-Daten oder Befunde hoch. 
+              Füllen Sie das Formular aus und laden Sie Ihre EKG-Daten oder Unterlagen hoch. 
               Dr. Suwelack meldet sich innerhalb von 24 Stunden bei Ihnen.
             </p>
 
