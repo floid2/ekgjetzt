@@ -15,7 +15,7 @@ const WhyEKGJetztSection = () => {
     {
       icon: <MonitorSmartphone className="w-7 h-7" />,
       title: "Einfach & vollständig online",
-      description: "Unterlagen sicher hochladen – Befund per E-Mail erhalten.",
+      description: "Unterlagen sicher hochladen – Ersteinschätzung per E-Mail erhalten.",
     },
     {
       icon: <Shield className="w-7 h-7" />,
