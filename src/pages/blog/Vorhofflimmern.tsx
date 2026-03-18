@@ -166,7 +166,7 @@ const Vorhofflimmern = () => {
         <li>Neu aufgetretenem unregelmäßigem Puls</li>
         <li>Anhaltendem Herzrasen (über 10–15 Minuten)</li>
         <li>Herzrasen mit Schwindel, Atemnot oder Brustschmerzen</li>
-        <li>Auffälligem Smartwatch-Befund</li>
+        <li>Auffälligem Smartwatch-EKG</li>
         <li>Verdacht auf Vorhofflimmern bei bekannten Risikofaktoren</li>
       </ul>
 
