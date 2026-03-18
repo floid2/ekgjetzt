@@ -178,9 +178,11 @@ const Zweitmeinung = () => {
               Lassen Sie Ihre Befunde von einer unabhängigen Fachärztin einschätzen 
               und treffen Sie informierte Entscheidungen über Ihre Gesundheit.
             </p>
-            <Button size="lg" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank")}>
-              <MessageSquare className="w-4 h-4 mr-2" />
-              Zweitmeinung anfordern – 79 €
+            <Button size="lg" className="rounded-full" asChild>
+              <Link to="/zweitmeinung">
+                <MessageSquare className="w-4 h-4 mr-2" />
+                Zweitmeinung anfordern – 69 €
+              </Link>
             </Button>
           </div>
         </div>
