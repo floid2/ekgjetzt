@@ -30,6 +30,7 @@ import SmartwatchEKGService from "./pages/leistungen/SmartwatchEKGService";
 import Zweitmeinung from "./pages/leistungen/Zweitmeinung";
 import Videosprechstunde from "./pages/leistungen/Videosprechstunde";
 import EKGAnalyse from "./pages/EKGAnalyse";
+import ZweitmeinungFormular from "./pages/Zweitmeinung";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
