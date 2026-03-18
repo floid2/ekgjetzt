@@ -97,7 +97,7 @@ const Videosprechstunde = () => {
             <h2 className="text-2xl font-serif text-foreground text-center mb-8">Ideal für diese Anliegen</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Ausführliche Besprechung eines komplexen Befunds",
+                "Ausführliche Besprechung komplexer Unterlagen",
                 "Beratung zu Behandlungsoptionen und deren Vor-/Nachteilen",
                 "Fragen zu Medikamenten und Nebenwirkungen",
                 "Beratung vor geplanten Eingriffen",
