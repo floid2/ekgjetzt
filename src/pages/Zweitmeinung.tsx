@@ -8,10 +8,11 @@ import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
+const WEBHOOK_URL = "https://n8n.avantic.de/webhook/zm-zweitmeinung-anfrage";
 
 const Zweitmeinung = () => {
   const { toast } = useToast();
-  const [consent1, setConsent1] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [consent2, setConsent2] = useState(false);
   const [selectedFile1, setSelectedFile1] = useState<File | null>(null);
   const [selectedFile2, setSelectedFile2] = useState<File | null>(null);
