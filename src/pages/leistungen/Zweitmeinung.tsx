@@ -28,7 +28,7 @@ const Zweitmeinung = () => {
     <>
       <SEOHead 
         title="Ärztliche Zweitmeinung"
-        description="Unabhängige kardiologische Zweitmeinung zu Ihren Befunden. Verständliche Einordnung, konkrete Empfehlungen. 79€ - Antwort in 48h."
+        description="Unabhängige kardiologische Zweitmeinung zu Ihren Unterlagen. Verständliche Einordnung, konkrete Empfehlungen. 69€ - Antwort in 48h."
         canonical="/leistungen/zweitmeinung"
         schema={schema}
       />
