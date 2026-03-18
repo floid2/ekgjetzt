@@ -5,7 +5,7 @@ const WhyEKGJetztSection = () => {
     {
       icon: <Stethoscope className="w-7 h-7" />,
       title: "Fachärztliche Auswertung",
-      description: "Alle Befunde werden ausschließlich von einer approbierten Fachärztin für Kardiologie analysiert.",
+      description: "Alle Ersteinschätzungen werden ausschließlich von einer approbierten Fachärztin für Kardiologie erstellt.",
     },
     {
       icon: <Clock className="w-7 h-7" />,
