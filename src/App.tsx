@@ -30,6 +30,7 @@ import SmartwatchEKGService from "./pages/leistungen/SmartwatchEKGService";
 import Zweitmeinung from "./pages/leistungen/Zweitmeinung";
 import Videosprechstunde from "./pages/leistungen/Videosprechstunde";
 import EKGAnalyse from "./pages/EKGAnalyse";
+import ZweitmeinungFormular from "./pages/Zweitmeinung";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/leistungen/smartwatch-ekg" element={<SmartwatchEKGService />} />
             <Route path="/ekg-analyse" element={<EKGAnalyse />} />
             <Route path="/leistungen/zweitmeinung" element={<Zweitmeinung />} />
+            <Route path="/zweitmeinung" element={<ZweitmeinungFormular />} />
             <Route path="/leistungen/videosprechstunde" element={<Videosprechstunde />} />
             {/* Herzgesundheit Hub */}
             <Route path="/herzgesundheit" element={<Herzgesundheit />} />
