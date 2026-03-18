@@ -70,7 +70,7 @@ const SmartwatchEKGService = () => {
                 <Clock className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">Schnelle Antwort</h3>
                 <p className="text-muted-foreground">
-                  Befund innerhalb von 48 Stunden – keine wochenlange Wartezeit auf einen Facharzttermin.
+                  Ärztliche Ersteinschätzung innerhalb von 48 Stunden – keine wochenlange Wartezeit auf einen Facharzttermin.
                 </p>
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
