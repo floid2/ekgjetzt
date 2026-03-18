@@ -28,7 +28,7 @@ const SmartwatchEKGService = () => {
     <>
       <SEOHead 
         title="Smartwatch-EKG Analyse"
-        description="Lassen Sie Ihr Apple Watch, Samsung Galaxy Watch oder Withings EKG von einer erfahrenen Kardiologin auswerten. Befund in 48h für nur 39€."
+        description="Lassen Sie Ihr Apple Watch, Samsung Galaxy Watch oder Withings EKG von einer erfahrenen Kardiologin auswerten. Ersteinschätzung in 48h für nur 39€."
         canonical="/leistungen/smartwatch-ekg"
         schema={schema}
       />
