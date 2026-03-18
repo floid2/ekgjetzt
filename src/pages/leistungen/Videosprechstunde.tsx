@@ -104,7 +104,7 @@ const Videosprechstunde = () => {
                 "Lifestyle-Beratung bei Herzerkrankungen",
                 "Psychische Belastung durch Herzerkrankung",
                 "Beratung für Angehörige von Herzpatienten",
-                "Fragen, die sich nicht in einem kurzen Befund klären lassen"
+                "Fragen, die sich nicht in einer kurzen Ersteinschätzung klären lassen"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
