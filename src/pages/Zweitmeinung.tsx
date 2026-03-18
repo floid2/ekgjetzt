@@ -8,9 +8,11 @@ import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
+const WEBHOOK_URL = "https://n8n.avantic.de/webhook/zm-zweitmeinung-anfrage";
 
 const Zweitmeinung = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [consent1, setConsent1] = useState(false);
   const [consent2, setConsent2] = useState(false);
   const [selectedFile1, setSelectedFile1] = useState<File | null>(null);
@@ -60,6 +62,8 @@ const Zweitmeinung = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (isSubmitting) return;
+
     if (!selectedFile1) {
       toast({
         title: "Unterlage fehlt",
@@ -78,11 +82,72 @@ const Zweitmeinung = () => {
       return;
     }
 
-    // Submission wird im nächsten Schritt implementiert
-    toast({
-      title: "Hinweis",
-      description: "Die Formular-Übermittlung wird im nächsten Schritt implementiert.",
-    });
+    setIsSubmitting(true);
+
+    const form = e.target as HTMLFormElement;
+    const hiddenForm = document.createElement("form");
+    hiddenForm.method = "POST";
+    hiddenForm.action = WEBHOOK_URL;
+    hiddenForm.enctype = "multipart/form-data";
+    hiddenForm.style.display = "none";
+
+    const addField = (name: string, value: string) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      hiddenForm.appendChild(input);
+    };
+
+    addField("Ihr Name", (form.elements.namedItem("ihrName") as HTMLInputElement).value);
+    addField("E-Mail-Adresse", (form.elements.namedItem("email") as HTMLInputElement).value);
+    addField("Geburtsdatum", (form.elements.namedItem("geburtsdatum") as HTMLInputElement).value);
+    addField("Beschwerden / Symptome", (form.elements.namedItem("beschwerden") as HTMLTextAreaElement).value);
+    addField("Spezifische Fragen", (form.elements.namedItem("fragen") as HTMLTextAreaElement).value);
+    addField(
+      "Datenschutz & Vertragsbedingungen",
+      "Ich habe die Datenschutzerklärung gelesen und willige in die Verarbeitung meiner Gesundheitsdaten ein."
+    );
+    addField(
+      "Datenschutz & Vertragsbedingungen",
+      "Ich akzeptiere die AGB und bestätige, dass die kardiologische Zweitmeinung keine klinische Diagnose oder Untersuchung vor Ort ersetzt."
+    );
+    addField("submittedAt", new Date().toISOString());
+    addField("formMode", "production");
+
+    // File 1
+    const fileInput1 = document.createElement("input");
+    fileInput1.type = "file";
+    fileInput1.name = "Unterlage_1";
+    const dt1 = new DataTransfer();
+    dt1.items.add(selectedFile1);
+    fileInput1.files = dt1.files;
+    hiddenForm.appendChild(fileInput1);
+
+    // File 2
+    if (selectedFile2) {
+      const fileInput2 = document.createElement("input");
+      fileInput2.type = "file";
+      fileInput2.name = "Unterlage_2";
+      const dt2 = new DataTransfer();
+      dt2.items.add(selectedFile2);
+      fileInput2.files = dt2.files;
+      hiddenForm.appendChild(fileInput2);
+    }
+
+    // File 3
+    if (selectedFile3) {
+      const fileInput3 = document.createElement("input");
+      fileInput3.type = "file";
+      fileInput3.name = "Unterlage_3";
+      const dt3 = new DataTransfer();
+      dt3.items.add(selectedFile3);
+      fileInput3.files = dt3.files;
+      hiddenForm.appendChild(fileInput3);
+    }
+
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
   };
 
   const renderFileUpload = (
@@ -307,9 +372,16 @@ const Zweitmeinung = () => {
                   type="submit"
                   size="lg"
                   className="w-full rounded-full"
+                  disabled={isSubmitting}
                 >
-                  <Upload className="w-4 h-4 mr-2" />
-                  Kostenpflichtig einreichen (69 €)
+                  {isSubmitting ? (
+                    "Wird gesendet..."
+                  ) : (
+                    <>
+                      <Upload className="w-4 h-4 mr-2" />
+                      Kostenpflichtig einreichen (69 €)
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
