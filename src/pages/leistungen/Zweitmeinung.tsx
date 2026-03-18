@@ -54,7 +54,7 @@ const Zweitmeinung = () => {
               Erhalten Sie Klarheit und Sicherheit durch eine erfahrene Fachärztin.
             </p>
             <div className="flex items-center justify-center gap-4 mb-8">
-              <span className="text-4xl font-bold text-primary">79 €</span>
+              <span className="text-4xl font-bold text-primary">69 €</span>
               <span className="text-muted-foreground">einmalig</span>
             </div>
             <Button size="lg" className="rounded-full" asChild>
