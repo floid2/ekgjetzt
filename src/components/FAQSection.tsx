@@ -8,7 +8,7 @@ import {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Wie schnell bekomme ich meinen Befund?",
+      question: "Wie schnell bekomme ich meine ärztliche Ersteinschätzung?",
       answer: "In der Regel innerhalb von 24–48 Stunden.",
     },
     {

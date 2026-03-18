@@ -11,7 +11,7 @@ const SmartwatchEKGService = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Smartwatch-EKG Analyse",
-    "description": "Professionelle Auswertung Ihres Smartwatch-EKGs durch eine Fachärztin für Kardiologie. Befund innerhalb von 48 Stunden.",
+    "description": "Professionelle Auswertung Ihres Smartwatch-EKGs durch eine Fachärztin für Kardiologie. Ärztliche Ersteinschätzung innerhalb von 48 Stunden.",
     "provider": {
       "@type": "Physician",
       "name": "Dr. med. Rebekka Suwelack",
@@ -28,7 +28,7 @@ const SmartwatchEKGService = () => {
     <>
       <SEOHead 
         title="Smartwatch-EKG Analyse"
-        description="Lassen Sie Ihr Apple Watch, Samsung Galaxy Watch oder Withings EKG von einer erfahrenen Kardiologin auswerten. Befund in 48h für nur 39€."
+        description="Lassen Sie Ihr Apple Watch, Samsung Galaxy Watch oder Withings EKG von einer erfahrenen Kardiologin auswerten. Ersteinschätzung in 48h für nur 39€."
         canonical="/leistungen/smartwatch-ekg"
         schema={schema}
       />
@@ -70,7 +70,7 @@ const SmartwatchEKGService = () => {
                 <Clock className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">Schnelle Antwort</h3>
                 <p className="text-muted-foreground">
-                  Befund innerhalb von 48 Stunden – keine wochenlange Wartezeit auf einen Facharzttermin.
+                  Ärztliche Ersteinschätzung innerhalb von 48 Stunden – keine wochenlange Wartezeit auf einen Facharzttermin.
                 </p>
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
@@ -82,7 +82,7 @@ const SmartwatchEKGService = () => {
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
                 <CheckCircle className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">Verständlicher Befund</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Verständliche Ersteinschätzung</h3>
                 <p className="text-muted-foreground">
                   Klare Einschätzung und konkrete Handlungsempfehlungen – kein medizinisches Fachchinesisch.
                 </p>
@@ -116,9 +116,9 @@ const SmartwatchEKGService = () => {
                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   3
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Befund erhalten</h3>
+                <h3 className="font-semibold text-foreground mb-2">Ersteinschätzung erhalten</h3>
                 <p className="text-sm text-muted-foreground">
-                  Innerhalb von 48 Stunden erhalten Sie Ihren verständlichen Befund per E-Mail.
+                  Innerhalb von 48 Stunden erhalten Sie Ihre verständliche ärztliche Ersteinschätzung per E-Mail.
                 </p>
               </div>
             </div>
@@ -131,10 +131,10 @@ const SmartwatchEKGService = () => {
               {[
                 "Analyse Ihres Smartwatch-EKGs durch eine Fachärztin",
                 "Einschätzung: unauffällig / kontrollbedürftig / abklärungsbedürftig",
-                "Verständliche Erklärung des Befunds",
+                "Verständliche Erklärung der Ersteinschätzung",
                 "Konkrete Handlungsempfehlung",
                 "Hinweise für das Gespräch mit Ihrem Hausarzt",
-                "Schriftlicher Befund zum Speichern"
+                "Schriftliche ärztliche Ersteinschätzung zum Speichern"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />

@@ -166,7 +166,7 @@ const Vorhofflimmern = () => {
         <li>Neu aufgetretenem unregelmäßigem Puls</li>
         <li>Anhaltendem Herzrasen (über 10–15 Minuten)</li>
         <li>Herzrasen mit Schwindel, Atemnot oder Brustschmerzen</li>
-        <li>Auffälligem Smartwatch-Befund</li>
+        <li>Auffälligem Smartwatch-EKG</li>
         <li>Verdacht auf Vorhofflimmern bei bekannten Risikofaktoren</li>
       </ul>
 
@@ -181,8 +181,8 @@ const Vorhofflimmern = () => {
       <div className="p-6 bg-primary/5 rounded-xl my-8 not-prose">
         <h3 className="text-lg font-semibold text-foreground mb-2">Zweitmeinung bei EKGJetzt</h3>
         <p className="text-muted-foreground mb-0">
-          Sie haben einen Befund erhalten und möchten eine zweite Meinung? Oder Ihr Smartwatch zeigt 
-          Vorhofflimmern an? Bei EKGJetzt können Sie Ihre Befunde von einer erfahrenen Kardiologin 
+          Sie haben Unterlagen erhalten und möchten eine zweite Meinung? Oder Ihr Smartwatch zeigt 
+          Vorhofflimmern an? Bei EKGJetzt können Sie Ihre Unterlagen von einer erfahrenen Kardiologin 
           beurteilen lassen – schnell, unkompliziert und verständlich erklärt.
         </p>
       </div>

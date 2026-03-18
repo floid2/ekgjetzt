@@ -139,7 +139,7 @@ const Rhythmusstoerungen = () => {
       <div className="p-6 bg-primary/5 rounded-xl my-8">
         <h3 className="text-lg font-semibold text-foreground mb-2">EKG-Check bei Herzstolpern</h3>
         <p className="text-muted-foreground mb-0">
-          Haben Sie Herzstolpern oder einen auffälligen Smartwatch-Befund? Im EKGJetzt-Service 
+          Haben Sie Herzstolpern oder ein auffälliges Smartwatch-EKG? Im EKGJetzt-Service 
           können Sie Ihre Aufzeichnungen schnell und unkompliziert von einer erfahrenen Kardiologin 
           beurteilen lassen – ohne wochenlange Wartezeiten.
         </p>

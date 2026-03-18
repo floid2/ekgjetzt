@@ -33,6 +33,7 @@ const NavigationHeader = () => {
   const services = [
     { label: "Smartwatch-EKG Analyse", href: "/leistungen/smartwatch-ekg" },
     { label: "Ärztliche Zweitmeinung", href: "/leistungen/zweitmeinung" },
+    { label: "Zweitmeinung anfordern", href: "/zweitmeinung" },
     { label: "Video-Sprechstunde", href: "/leistungen/videosprechstunde" },
   ];
 

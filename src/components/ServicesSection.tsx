@@ -103,7 +103,7 @@ const ServicesSection = () => {
         "Fachärztliche Interpretation der Kurven",
         "Einschätzung: unauffällig / kontrollbedürftig / abklärungsbedürftig",
         "Handlungsempfehlungen",
-        "Befund in 24–48h",
+        "Ersteinschätzung in 24–48h",
       ],
       icon: <Watch className="w-10 h-10" />,
       color: "blue" as const,
@@ -115,7 +115,7 @@ const ServicesSection = () => {
       price: "69",
       description: "Optimal, wenn Sie einen Arztbrief, einen EKG-Bericht oder andere medizinische Unterlagen besser verstehen möchten – oder wenn Sie verschiedene, widersprüchliche Einschätzungen erhalten haben.",
       features: [
-        "Upload Ihrer Befunde (Arztbrief, EKG, MRT/CT-Bericht, Entlassungsbrief)",
+        "Upload Ihrer Unterlagen (Arztbrief, EKG, MRT/CT-Bericht, Entlassungsbrief)",
         "Strukturierte ärztliche Zweitmeinung",
         "Erklärung der Diagnose & der medizinischen Zusammenhänge",
         "Empfehlung der nächsten sinnvollen Schritte",
@@ -133,7 +133,7 @@ const ServicesSection = () => {
       description: "Für alle, die ihre Beschwerden und Sorgen direkt und persönlich mit einer Fachärztin besprechen möchten – schnell, vertrauensvoll und digital.",
       features: [
         "Zertifizierte Videosprechstunde",
-        "Besprechung Ihrer Beschwerden & Befunde",
+        "Besprechung Ihrer Beschwerden & Unterlagen",
         "Medizinische Orientierung & Handlungsempfehlungen",
         "Raum für Rückfragen",
         "Keine Wartezeiten",

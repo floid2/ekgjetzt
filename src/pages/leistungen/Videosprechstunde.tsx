@@ -97,14 +97,14 @@ const Videosprechstunde = () => {
             <h2 className="text-2xl font-serif text-foreground text-center mb-8">Ideal für diese Anliegen</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Ausführliche Besprechung eines komplexen Befunds",
+                "Ausführliche Besprechung komplexer Unterlagen",
                 "Beratung zu Behandlungsoptionen und deren Vor-/Nachteilen",
                 "Fragen zu Medikamenten und Nebenwirkungen",
                 "Beratung vor geplanten Eingriffen",
                 "Lifestyle-Beratung bei Herzerkrankungen",
                 "Psychische Belastung durch Herzerkrankung",
                 "Beratung für Angehörige von Herzpatienten",
-                "Fragen, die sich nicht in einem kurzen Befund klären lassen"
+                "Fragen, die sich nicht in einer kurzen Ersteinschätzung klären lassen"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -142,7 +142,7 @@ const Videosprechstunde = () => {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Unterlagen</h3>
                 <p className="text-sm text-muted-foreground">
-                  Sie laden relevante Befunde vorab hoch.
+                  Sie laden relevante Unterlagen vorab hoch.
                 </p>
               </div>
               <div className="text-center">

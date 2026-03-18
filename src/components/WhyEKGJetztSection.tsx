@@ -5,7 +5,7 @@ const WhyEKGJetztSection = () => {
     {
       icon: <Stethoscope className="w-7 h-7" />,
       title: "Fachärztliche Auswertung",
-      description: "Alle Befunde werden ausschließlich von einer approbierten Fachärztin für Kardiologie analysiert.",
+      description: "Alle Ersteinschätzungen werden ausschließlich von einer approbierten Fachärztin für Kardiologie erstellt.",
     },
     {
       icon: <Clock className="w-7 h-7" />,
@@ -15,7 +15,7 @@ const WhyEKGJetztSection = () => {
     {
       icon: <MonitorSmartphone className="w-7 h-7" />,
       title: "Einfach & vollständig online",
-      description: "Unterlagen sicher hochladen – Befund per E-Mail erhalten.",
+      description: "Unterlagen sicher hochladen – Ersteinschätzung per E-Mail erhalten.",
     },
     {
       icon: <Shield className="w-7 h-7" />,
@@ -25,7 +25,7 @@ const WhyEKGJetztSection = () => {
     {
       icon: <Scale className="w-7 h-7" />,
       title: "Unabhängige ärztliche Zweitmeinung",
-      description: "Ideal bei Unsicherheiten, unklaren Befunden oder unterschiedlichen Einschätzungen von Ärzt:innen.",
+      description: "Ideal bei Unsicherheiten, unklaren Unterlagen oder unterschiedlichen Einschätzungen von Ärzt:innen.",
     },
   ];
 

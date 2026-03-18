@@ -306,7 +306,7 @@ const Zweitmeinung = () => {
                 {renderFileUpload(
                   "Unterlage 1 hochladen",
                   true,
-                  "Arztbrief, Befund oder andere medizinische Unterlage",
+                  "Arztbrief, Unterlage oder anderes medizinisches Dokument",
                   selectedFile1,
                   setSelectedFile1,
                   fileInputRef1
@@ -316,7 +316,7 @@ const Zweitmeinung = () => {
                 {renderFileUpload(
                   "Unterlage 2 hochladen",
                   false,
-                  "Arztbrief, Befund oder andere medizinische Unterlage",
+                  "Arztbrief, Unterlage oder anderes medizinisches Dokument",
                   selectedFile2,
                   setSelectedFile2,
                   fileInputRef2
@@ -326,7 +326,7 @@ const Zweitmeinung = () => {
                 {renderFileUpload(
                   "Unterlage 3 hochladen",
                   false,
-                  "Arztbrief, Befund oder andere medizinische Unterlage",
+                  "Arztbrief, Unterlage oder anderes medizinisches Dokument",
                   selectedFile3,
                   setSelectedFile3,
                   fileInputRef3

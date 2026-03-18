@@ -11,7 +11,7 @@ const Zweitmeinung = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Ärztliche Zweitmeinung",
-    "description": "Unabhängige fachärztliche Zweitmeinung zu kardiologischen Befunden. Verständliche Einordnung durch eine erfahrene Kardiologin.",
+    "description": "Unabhängige fachärztliche Zweitmeinung zu kardiologischen Unterlagen. Verständliche Einordnung durch eine erfahrene Kardiologin.",
     "provider": {
       "@type": "Physician",
       "name": "Dr. med. Rebekka Suwelack",
@@ -28,7 +28,7 @@ const Zweitmeinung = () => {
     <>
       <SEOHead 
         title="Ärztliche Zweitmeinung"
-        description="Unabhängige kardiologische Zweitmeinung zu Ihren Befunden. Verständliche Einordnung, konkrete Empfehlungen. 79€ - Antwort in 48h."
+        description="Unabhängige kardiologische Zweitmeinung zu Ihren Unterlagen. Verständliche Einordnung, konkrete Empfehlungen. 69€ - Antwort in 48h."
         canonical="/leistungen/zweitmeinung"
         schema={schema}
       />
@@ -50,11 +50,11 @@ const Zweitmeinung = () => {
               Ärztliche Zweitmeinung
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Sie haben einen kardiologischen Befund erhalten und möchten eine unabhängige Einschätzung? 
+              Sie haben kardiologische Unterlagen erhalten und möchten eine unabhängige Einschätzung? 
               Erhalten Sie Klarheit und Sicherheit durch eine erfahrene Fachärztin.
             </p>
             <div className="flex items-center justify-center gap-4 mb-8">
-              <span className="text-4xl font-bold text-primary">79 €</span>
+              <span className="text-4xl font-bold text-primary">69 €</span>
               <span className="text-muted-foreground">einmalig</span>
             </div>
             <Button size="lg" className="rounded-full" asChild>
@@ -97,9 +97,9 @@ const Zweitmeinung = () => {
             <h2 className="text-2xl font-serif text-foreground text-center mb-8">Wann ist eine Zweitmeinung sinnvoll?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Sie haben einen Befund erhalten, der Sie beunruhigt",
+                "Sie haben Unterlagen erhalten, die Sie beunruhigen",
                 "Die vorgeschlagene Behandlung erscheint Ihnen zu invasiv",
-                "Sie verstehen Ihren Befund nicht vollständig",
+                "Sie verstehen Ihre Unterlagen nicht vollständig",
                 "Sie möchten sicher sein, bevor Sie eine Entscheidung treffen",
                 "Verschiedene Ärzte haben unterschiedliche Meinungen",
                 "Sie möchten eine moderne, telemedizinische Perspektive"
@@ -117,7 +117,7 @@ const Zweitmeinung = () => {
             <h2 className="text-2xl font-serif text-foreground text-center mb-8">Das ist im Preis enthalten</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Sichtung aller eingereichten Unterlagen (EKGs, Befunde, Arztbriefe)",
+                "Sichtung aller eingereichten Unterlagen (EKGs, Arztbriefe, Berichte)",
                 "Ausführliche schriftliche Stellungnahme",
                 "Verständliche Erklärung der Diagnose",
                 "Einschätzung der vorgeschlagenen Therapie",

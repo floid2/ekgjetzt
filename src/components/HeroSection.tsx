@@ -43,7 +43,7 @@ const HeroSection = () => {
             <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.15s" }}>
               <li className="flex items-start gap-3 text-muted-foreground text-body">
                 <span className="text-primary font-bold text-lg">✓</span>
-                <span>Befund in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
+                <span>Ärztliche Ersteinschätzung in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-body">
                 <span className="text-primary font-bold text-lg">✓</span>
@@ -79,7 +79,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground animate-slide-up justify-center" style={{ animationDelay: "0.4s" }}>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary" />
-                <span>Befund in 24-48h</span>
+                <span>Ersteinschätzung in 24-48h</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="w-4 h-4 text-primary" />
@@ -118,7 +118,7 @@ const HeroSection = () => {
               <div className="flex flex-col items-center text-center">
                 <FileCheck className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
                 <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">Ärztliche Zweitmeinung</h3>
-                <p className="text-[#4F4F4F] text-sm mb-4">Unabhängige Beurteilung vorhandener Befunde.</p>
+                <p className="text-[#4F4F4F] text-sm mb-4">Unabhängige Beurteilung vorhandener Unterlagen.</p>
                 <Link 
                   to="/leistungen/zweitmeinung"
                   className="text-primary border border-primary rounded-full px-4 py-2 text-sm font-medium hover:bg-primary hover:text-white transition-colors"

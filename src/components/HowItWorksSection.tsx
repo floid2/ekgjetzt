@@ -6,7 +6,7 @@ const HowItWorksSection = () => {
       number: "1",
       icon: <Upload className="w-7 h-7" />,
       title: "Unterlagen hochladen",
-      description: "EKG oder Befunde sicher über unser Formular übermitteln.",
+      description: "EKG oder Unterlagen sicher über unser Formular übermitteln.",
       color: "bg-primary/10 text-primary border-primary/20",
       numberColor: "text-primary",
     },
@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
     {
       number: "3",
       icon: <CheckCircle2 className="w-7 h-7" />,
-      title: "Befund & Empfehlung erhalten",
+      title: "Ersteinschätzung & Empfehlung erhalten",
       description: "Innerhalb von 24–48h erhalten Sie eine klare, verständliche Einschätzung.",
       color: "bg-warning/10 text-warning border-warning/20",
       numberColor: "text-warning",
