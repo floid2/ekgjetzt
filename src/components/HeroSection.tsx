@@ -43,7 +43,7 @@ const HeroSection = () => {
             <ul className="space-y-3 mb-10 animate-slide-up inline-block text-left" style={{ animationDelay: "0.15s" }}>
               <li className="flex items-start gap-3 text-muted-foreground text-body">
                 <span className="text-primary font-bold text-lg">✓</span>
-                <span>Befund in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
+                <span>Ärztliche Ersteinschätzung in 48h von <strong className="text-foreground">Fachärztin für Kardiologie</strong></span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-body">
                 <span className="text-primary font-bold text-lg">✓</span>
