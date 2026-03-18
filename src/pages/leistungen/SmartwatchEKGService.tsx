@@ -82,7 +82,7 @@ const SmartwatchEKGService = () => {
               </div>
               <div className="p-6 bg-card rounded-xl border border-border">
                 <CheckCircle className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">Verständlicher Befund</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Verständliche Ersteinschätzung</h3>
                 <p className="text-muted-foreground">
                   Klare Einschätzung und konkrete Handlungsempfehlungen – kein medizinisches Fachchinesisch.
                 </p>
