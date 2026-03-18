@@ -97,9 +97,9 @@ const Zweitmeinung = () => {
             <h2 className="text-2xl font-serif text-foreground text-center mb-8">Wann ist eine Zweitmeinung sinnvoll?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Sie haben einen Befund erhalten, der Sie beunruhigt",
+                "Sie haben Unterlagen erhalten, die Sie beunruhigen",
                 "Die vorgeschlagene Behandlung erscheint Ihnen zu invasiv",
-                "Sie verstehen Ihren Befund nicht vollständig",
+                "Sie verstehen Ihre Unterlagen nicht vollständig",
                 "Sie möchten sicher sein, bevor Sie eine Entscheidung treffen",
                 "Verschiedene Ärzte haben unterschiedliche Meinungen",
                 "Sie möchten eine moderne, telemedizinische Perspektive"
