@@ -150,7 +150,7 @@ const ServicesSection = () => {
     } else if (service === "Smartwatch-EKG Analyse") {
       window.location.href = "/ekg-analyse";
     } else if (service === "Ärztliche Zweitmeinung") {
-      window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank");
+      window.location.href = "/zweitmeinung";
     } else {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }

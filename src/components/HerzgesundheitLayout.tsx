@@ -46,7 +46,7 @@ const HerzgesundheitLayout = ({ children, title }: HerzgesundheitLayoutProps) =>
                   <Upload className="w-4 h-4 mr-2" />
                   EKG hochladen
                 </Button>
-                <Button variant="outline" className="rounded-full" onClick={() => window.open("https://n8n.avantic.de/form/5830a46c-3654-4d8b-ab33-058caf4083d7", "_blank")}>
+                <Button variant="outline" className="rounded-full" onClick={() => window.location.href = "/zweitmeinung"}>
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Zweitmeinung anfordern
                 </Button>
