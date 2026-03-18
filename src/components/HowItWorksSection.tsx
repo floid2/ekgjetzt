@@ -6,7 +6,7 @@ const HowItWorksSection = () => {
       number: "1",
       icon: <Upload className="w-7 h-7" />,
       title: "Unterlagen hochladen",
-      description: "EKG oder Befunde sicher über unser Formular übermitteln.",
+      description: "EKG oder Unterlagen sicher über unser Formular übermitteln.",
       color: "bg-primary/10 text-primary border-primary/20",
       numberColor: "text-primary",
     },
