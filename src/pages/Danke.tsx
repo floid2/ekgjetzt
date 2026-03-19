@@ -28,7 +28,7 @@ const Danke = () => {
       <SEOHead
         title="Zahlung erfolgreich – EKGjetzt"
         description="Ihre Zahlung war erfolgreich. Vielen Dank für Ihre Buchung."
-        noindex
+        
       />
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[hsl(var(--ekg-teal-light))] to-background p-4">
         <Card className="max-w-lg w-full text-center">
