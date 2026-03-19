@@ -10,8 +10,8 @@ const Abgebrochen = () => {
       <SEOHead
         title="Zahlung abgebrochen – EKGjetzt"
         description="Ihre Zahlung wurde nicht abgeschlossen. Starten Sie den Vorgang erneut."
-        noindex
       />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[hsl(43,87%,95%)] to-background p-4">
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 to-background p-4">
         <Card className="max-w-lg w-full text-center">
           <CardContent className="p-8 md:p-10 space-y-6">
