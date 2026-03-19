@@ -166,9 +166,8 @@ const ContactSection = () => {
                 type="submit" 
                 size="lg" 
                 className="w-full rounded-full"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? "Wird gesendet..." : "Anfrage absenden"}
+                Anfrage absenden
               </Button>
 
               <p className="text-xs text-center text-muted-foreground">
