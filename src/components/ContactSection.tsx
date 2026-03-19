@@ -124,7 +124,6 @@ const ContactSection = () => {
                   <option value="ekg">EKG-Analyse (39€)</option>
                   <option value="zweitmeinung">Zweitmeinung (69€)</option>
                   <option value="video">Video-Sprechstunde (99€)</option>
-                  <option value="mitgliedschaft">Herzschlag-Club Mitgliedschaft</option>
                 </select>
               </div>
 
