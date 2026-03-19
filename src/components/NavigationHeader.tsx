@@ -32,8 +32,7 @@ const NavigationHeader = () => {
 
   const services = [
     { label: "Smartwatch-EKG Analyse", href: "/leistungen/smartwatch-ekg" },
-    { label: "Ärztliche Zweitmeinung", href: "/leistungen/zweitmeinung" },
-    { label: "Zweitmeinung anfordern", href: "/zweitmeinung" },
+    { label: "Ärztliche Zweitmeinung", href: "/zweitmeinung" },
     { label: "Video-Sprechstunde", href: "/leistungen/videosprechstunde" },
   ];
 
@@ -46,7 +45,6 @@ const NavigationHeader = () => {
   const pageLinks = [
     { label: "Herzgesundheit", href: "/herzgesundheit" },
     { label: "Blog", href: "/blog" },
-    { label: "Herzschlag-Club", href: "/herzschlagclub" },
   ];
 
   return (

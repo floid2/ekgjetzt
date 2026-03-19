@@ -8,7 +8,6 @@ import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import SecuritySection from "@/components/SecuritySection";
 import FAQSection from "@/components/FAQSection";
-import HerzschlagClubTeaser from "@/components/HerzschlagClubTeaser";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -53,7 +52,6 @@ const Index = () => {
         <div id="faq">
           <FAQSection />
         </div>
-        <HerzschlagClubTeaser />
         <ContactSection />
       </main>
       <Footer />

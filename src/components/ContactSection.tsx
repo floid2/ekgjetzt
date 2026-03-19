@@ -6,23 +6,29 @@ import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    const form = e.currentTarget;
+    const vorname = (form.querySelector('[placeholder="Max"]') as HTMLInputElement)?.value || "";
+    const nachname = (form.querySelector('[placeholder="Mustermann"]') as HTMLInputElement)?.value || "";
+    const email = (form.querySelector('[type="email"]') as HTMLInputElement)?.value || "";
+    const service = (form.querySelector('select') as HTMLSelectElement)?.value || "";
+    const serviceLabel = (form.querySelector('select') as HTMLSelectElement)?.selectedOptions[0]?.text || "";
+    const nachricht = (form.querySelector('textarea') as HTMLTextAreaElement)?.value || "";
 
-    // Simulate form submission - replace with actual n8n webhook
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      toast({
-        title: "Anfrage gesendet!",
-        description: "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
-      });
-    }, 1500);
+    const subject = `Neue Anfrage – ${serviceLabel} – ${vorname} ${nachname}`;
+    const body = `Vorname: ${vorname}\nNachname: ${nachname}\nE-Mail: ${email}\nGewünschter Service: ${serviceLabel}\n\nNachricht:\n${nachricht}`;
+
+    window.location.href = `mailto:info@ekgjetzt.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setIsSubmitted(true);
+    toast({
+      title: "E-Mail-Programm geöffnet",
+      description: "Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die E-Mail ab.",
+    });
   };
 
   if (isSubmitted) {
@@ -70,7 +76,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">E-Mail</p>
-                  <p className="text-muted-foreground">kontakt@ekgjetzt.de</p>
+                  <p className="text-muted-foreground">info@ekgjetzt.de</p>
                 </div>
               </div>
 
@@ -124,7 +130,6 @@ const ContactSection = () => {
                   <option value="ekg">EKG-Analyse (39€)</option>
                   <option value="zweitmeinung">Zweitmeinung (69€)</option>
                   <option value="video">Video-Sprechstunde (99€)</option>
-                  <option value="mitgliedschaft">Herzschlag-Club Mitgliedschaft</option>
                 </select>
               </div>
 
@@ -161,9 +166,8 @@ const ContactSection = () => {
                 type="submit" 
                 size="lg" 
                 className="w-full rounded-full"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? "Wird gesendet..." : "Anfrage absenden"}
+                Anfrage absenden
               </Button>
 
               <p className="text-xs text-center text-muted-foreground">
