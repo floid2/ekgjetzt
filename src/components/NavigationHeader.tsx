@@ -45,7 +45,6 @@ const NavigationHeader = () => {
   const pageLinks = [
     { label: "Herzgesundheit", href: "/herzgesundheit" },
     { label: "Blog", href: "/blog" },
-    { label: "Herzschlag-Club", href: "/herzschlagclub" },
   ];
 
   return (

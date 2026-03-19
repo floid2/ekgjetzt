@@ -54,11 +54,6 @@ const Footer = () => {
                   Video-Sprechstunde
                 </Link>
               </li>
-              <li>
-                <Link to="/herzschlagclub" className="text-body text-muted-foreground hover:text-primary transition-colors">
-                  Herzschlag-Club
-                </Link>
-              </li>
             </ul>
           </div>
 

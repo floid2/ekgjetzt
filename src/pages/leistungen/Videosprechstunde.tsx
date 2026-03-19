@@ -196,17 +196,17 @@ const Videosprechstunde = () => {
                 </span>
               </Link>
               <Link 
-                to="/herzschlagclub"
+                to="/kontakt"
                 className="p-6 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-md transition-all group"
               >
                 <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  Herzschlag-Club
+                  Kontakt
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Regelmäßige Betreuung mit Video-Sprechstunden inklusive.
+                  Haben Sie Fragen? Wir helfen Ihnen gerne weiter.
                 </p>
                 <span className="text-sm text-primary inline-flex items-center gap-1">
-                  Mehr erfahren <ArrowRight className="w-4 h-4" />
+                  Kontakt aufnehmen <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
             </div>
