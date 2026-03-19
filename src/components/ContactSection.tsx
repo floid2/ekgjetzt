@@ -7,7 +7,6 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
