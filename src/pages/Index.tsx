@@ -53,7 +53,7 @@ const Index = () => {
         <div id="faq">
           <FAQSection />
         </div>
-        <HerzschlagClubTeaser />
+        <ContactSection />
         <ContactSection />
       </main>
       <Footer />
