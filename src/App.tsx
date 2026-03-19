@@ -31,6 +31,8 @@ import Zweitmeinung from "./pages/leistungen/Zweitmeinung";
 import Videosprechstunde from "./pages/leistungen/Videosprechstunde";
 import EKGAnalyse from "./pages/EKGAnalyse";
 import ZweitmeinungFormular from "./pages/Zweitmeinung";
+import Danke from "./pages/Danke";
+import Abgebrochen from "./pages/Abgebrochen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +75,9 @@ const App = () => (
             <Route path="/blog/smartwatch-ekg-was-zeigt-es" element={<SmartwatchEKGBlog />} />
             <Route path="/blog/vorhofflimmern-symptome-behandlung" element={<Vorhofflimmern />} />
             <Route path="/blog/eisenmangel-frauen-herz" element={<EisenmangelFrauen />} />
+            {/* Bestätigungsseiten */}
+            <Route path="/danke" element={<Danke />} />
+            <Route path="/abgebrochen" element={<Abgebrochen />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
