@@ -12,13 +12,12 @@ const Abgebrochen = () => {
         description="Ihre Zahlung wurde nicht abgeschlossen. Starten Sie den Vorgang erneut."
       />
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[hsl(43,87%,95%)] to-background p-4">
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 to-background p-4">
         <Card className="max-w-lg w-full text-center">
           <CardContent className="p-8 md:p-10 space-y-6">
             {/* Warning Icon */}
             <div className="flex justify-center">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--warning))]/10 flex items-center justify-center">
-                <AlertCircle className="w-12 h-12 text-[hsl(var(--warning))]" />
+              <div className="w-20 h-20 rounded-full bg-warning/10 flex items-center justify-center">
+                <AlertCircle className="w-12 h-12 text-warning" />
               </div>
             </div>
 

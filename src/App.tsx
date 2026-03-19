@@ -31,6 +31,8 @@ import Zweitmeinung from "./pages/leistungen/Zweitmeinung";
 import Videosprechstunde from "./pages/leistungen/Videosprechstunde";
 import EKGAnalyse from "./pages/EKGAnalyse";
 import ZweitmeinungFormular from "./pages/Zweitmeinung";
+import Danke from "./pages/Danke";
+import Abgebrochen from "./pages/Abgebrochen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
