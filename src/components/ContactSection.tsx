@@ -1,26 +1,26 @@
 import { useState } from "react";
-import { Heart, Mail, Upload, CheckCircle } from "lucide-react";
+import { Heart, Mail, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const vorname = (form.querySelector('[placeholder="Max"]') as HTMLInputElement)?.value || "";
-    const nachname = (form.querySelector('[placeholder="Mustermann"]') as HTMLInputElement)?.value || "";
-    const email = (form.querySelector('[type="email"]') as HTMLInputElement)?.value || "";
-    const service = (form.querySelector('select') as HTMLSelectElement)?.value || "";
-    const serviceLabel = (form.querySelector('select') as HTMLSelectElement)?.selectedOptions[0]?.text || "";
-    const nachricht = (form.querySelector('textarea') as HTMLTextAreaElement)?.value || "";
+    const vorname = (form.querySelector('#contact-vorname') as HTMLInputElement)?.value || "";
+    const nachname = (form.querySelector('#contact-nachname') as HTMLInputElement)?.value || "";
+    const email = (form.querySelector('#contact-email') as HTMLInputElement)?.value || "";
+    const nachricht = (form.querySelector('#contact-nachricht') as HTMLTextAreaElement)?.value || "";
 
-    const subject = `Neue Anfrage – ${serviceLabel} – ${vorname} ${nachname}`;
-    const body = `Vorname: ${vorname}\nNachname: ${nachname}\nE-Mail: ${email}\nGewünschter Service: ${serviceLabel}\n\nNachricht:\n${nachricht}`;
+    const subject = `Allgemeine Anfrage – ${vorname} ${nachname}`;
+    const body = `Vorname: ${vorname}\nNachname: ${nachname}\nE-Mail: ${email}\n\nNachricht:\n${nachricht}`;
 
     window.location.href = `mailto:info@ekgjetzt.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -29,6 +29,28 @@ const ContactSection = () => {
       title: "E-Mail-Programm geöffnet",
       description: "Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die E-Mail ab.",
     });
+  };
+
+  const showForm = selectedService === "" || selectedService === "allgemein";
+  const isRedirectService = selectedService === "ekg" || selectedService === "zweitmeinung" || selectedService === "video";
+
+  const redirectContent: Record<string, { text: string; buttonText: string; href: string; isMail?: boolean }> = {
+    ekg: {
+      text: "Für die EKG-Analyse nutzen Sie bitte unser spezielles Anfrageformular mit Upload-Funktion.",
+      buttonText: "Zum EKG-Formular",
+      href: "/ekg-analyse",
+    },
+    zweitmeinung: {
+      text: "Für die kardiologische Zweitmeinung nutzen Sie bitte unser spezielles Anfrageformular mit Upload-Funktion.",
+      buttonText: "Zum Zweitmeinung-Formular",
+      href: "/zweitmeinung",
+    },
+    video: {
+      text: "Für die Video-Sprechstunde kontaktieren Sie uns bitte per E-Mail, damit wir einen Termin vereinbaren können.",
+      buttonText: "E-Mail schreiben",
+      href: "mailto:info@ekgjetzt.de?subject=Anfrage%20Video-Sprechstunde",
+      isMail: true,
+    },
   };
 
   if (isSubmitted) {
@@ -40,10 +62,13 @@ const ContactSection = () => {
               <CheckCircle className="w-10 h-10 text-primary" />
             </div>
             <h2 className="text-3xl font-serif mb-4 text-foreground">Vielen Dank!</h2>
-            <p className="text-muted-foreground mb-6">
-              Ihre Anfrage ist bei uns eingegangen. Dr. Suwelack meldet sich innerhalb von 24 Stunden bei Ihnen.
+            <p className="text-muted-foreground mb-2">
+              Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die E-Mail ab.
             </p>
-            <Button variant="outline" onClick={() => setIsSubmitted(false)}>
+            <p className="text-muted-foreground mb-6">
+              Dr. Suwelack meldet sich innerhalb von 24 Stunden bei Ihnen.
+            </p>
+            <Button variant="outline" onClick={() => { setIsSubmitted(false); setSelectedService(""); }}>
               Weitere Anfrage stellen
             </Button>
           </div>
@@ -65,7 +90,7 @@ const ContactSection = () => {
               Starten Sie jetzt mit Ihrer Anfrage
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Füllen Sie das Formular aus und laden Sie Ihre EKG-Daten oder Unterlagen hoch. 
+              Wählen Sie den gewünschten Service aus und wir leiten Sie zum passenden Formular weiter.
               Dr. Suwelack meldet sich innerhalb von 24 Stunden bei Ihnen.
             </p>
 
@@ -107,17 +132,17 @@ const ContactSection = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">Vorname *</label>
-                  <Input placeholder="Max" required />
+                  <Input id="contact-vorname" placeholder="Max" required />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">Nachname *</label>
-                  <Input placeholder="Mustermann" required />
+                  <Input id="contact-nachname" placeholder="Mustermann" required />
                 </div>
               </div>
 
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">E-Mail *</label>
-                <Input type="email" placeholder="max@beispiel.de" required />
+                <Input id="contact-email" type="email" placeholder="max@beispiel.de" required />
               </div>
 
               <div>
@@ -125,54 +150,75 @@ const ContactSection = () => {
                 <select 
                   className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm"
                   required
+                  value={selectedService}
+                  onChange={(e) => setSelectedService(e.target.value)}
                 >
-                  <option value="">Bitte wählen...</option>
+                  <option value="" disabled>Bitte wählen...</option>
                   <option value="ekg">EKG-Analyse (39€)</option>
                   <option value="zweitmeinung">Zweitmeinung (69€)</option>
                   <option value="video">Video-Sprechstunde (99€)</option>
+                  <option value="allgemein">Allgemeine Frage</option>
                 </select>
               </div>
 
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Ihre Nachricht</label>
-                <Textarea 
-                  placeholder="Beschreiben Sie kurz Ihr Anliegen..."
-                  rows={4}
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Datei hochladen</label>
-                <div className="border-2 border-dashed border-border rounded-xl p-6 text-center hover:border-primary/50 transition-colors cursor-pointer">
-                  <Upload className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
-                  <p className="text-sm text-muted-foreground">
-                    EKG-PDF oder Unterlagen hier ablegen
+              {/* Redirect hint for EKG/Zweitmeinung/Video */}
+              {isRedirectService && redirectContent[selectedService] && (
+                <div className="p-5 rounded-xl bg-primary/5 border border-primary/20 space-y-4">
+                  <p className="text-sm text-foreground">
+                    {redirectContent[selectedService].text}
                   </p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">
-                    PDF, JPG, PNG bis 10MB
-                  </p>
+                  {redirectContent[selectedService].isMail ? (
+                    <Button asChild className="w-full rounded-full">
+                      <a href={redirectContent[selectedService].href}>
+                        {redirectContent[selectedService].buttonText}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button asChild className="w-full rounded-full">
+                      <Link to={redirectContent[selectedService].href}>
+                        {redirectContent[selectedService].buttonText}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  )}
                 </div>
-              </div>
+              )}
 
-              <div className="flex items-start gap-2">
-                <input type="checkbox" id="privacy" className="mt-1" required />
-                <label htmlFor="privacy" className="text-sm text-muted-foreground">
-                  Ich habe die <a href="#" className="text-primary hover:underline">Datenschutzerklärung</a> gelesen 
-                  und stimme der Verarbeitung meiner Gesundheitsdaten zu. *
-                </label>
-              </div>
+              {/* Regular form fields for "Allgemeine Frage" or default */}
+              {showForm && (
+                <>
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Ihre Nachricht *</label>
+                    <Textarea 
+                      id="contact-nachricht"
+                      placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                      rows={4}
+                      required={selectedService === "allgemein"}
+                    />
+                  </div>
 
-              <Button 
-                type="submit" 
-                size="lg" 
-                className="w-full rounded-full"
-              >
-                Anfrage absenden
-              </Button>
+                  <div className="flex items-start gap-2">
+                    <input type="checkbox" id="privacy" className="mt-1" required />
+                    <label htmlFor="privacy" className="text-sm text-muted-foreground">
+                      Ich habe die <a href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</a> gelesen 
+                      und stimme der Verarbeitung meiner Daten zu. *
+                    </label>
+                  </div>
 
-              <p className="text-xs text-center text-muted-foreground">
-                Sichere Übertragung • DSGVO-konform • Antwort in 24h
-              </p>
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full rounded-full"
+                  >
+                    Anfrage absenden
+                  </Button>
+
+                  <p className="text-xs text-center text-muted-foreground">
+                    Sichere Übertragung • DSGVO-konform • Antwort in 24h
+                  </p>
+                </>
+              )}
             </form>
           </div>
         </div>
