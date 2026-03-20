@@ -14,6 +14,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const WEBHOOK_URL = "https://n8n.avantic.de/webhook/7bce7b9e-6111-4674-bb47-6a648b731413";
 
 const EKGAnalyse = () => {
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
