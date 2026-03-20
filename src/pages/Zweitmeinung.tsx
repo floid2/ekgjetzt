@@ -259,7 +259,7 @@ const Zweitmeinung = () => {
                   <label htmlFor="ihrName" className="block text-sm font-medium text-foreground mb-2">
                     Ihr Name <span className="text-destructive">*</span>
                   </label>
-                  <Input id="ihrName" name="ihrName" required placeholder="Vor- und Nachname" />
+                  <Input id="ihrName" name="ihrName" required placeholder="Vor- und Nachname" defaultValue={searchParams.get("name") || ""} />
                 </div>
 
                 {/* Email */}
