@@ -191,7 +191,7 @@ const ContactSection = () => {
                     </Button>
                   ) : (
                     <Button asChild className="w-full rounded-full">
-                      <Link to={redirectContent[selectedService].href}>
+                      <Link to={getRedirectHref(redirectContent[selectedService].href)}>
                         {redirectContent[selectedService].buttonText}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>

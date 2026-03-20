@@ -347,7 +347,7 @@ const EKGAnalyse = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     E-Mail-Adresse <span className="text-destructive">*</span>
                   </label>
-                  <Input id="email" name="email" type="email" required placeholder="ihre@email.de" />
+                  <Input id="email" name="email" type="email" required placeholder="ihre@email.de" defaultValue={searchParams.get("email") || ""} />
                 </div>
 
                 {/* Geburtsdatum */}
