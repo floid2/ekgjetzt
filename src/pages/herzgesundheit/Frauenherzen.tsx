@@ -153,7 +153,7 @@ const Frauenherzen = () => {
       <div className="p-6 bg-pink-50 border border-pink-200 rounded-xl my-8">
         <h3 className="text-lg font-semibold text-pink-800 mb-2">Geschlechtersensible Kardiologie</h3>
         <p className="text-pink-800 mb-0">
-          Im Herzschlag-Club und bei EKGJetzt berücksichtigt Dr. Suwelack die besonderen Aspekte 
+          Bei EKGJetzt berücksichtigt Dr. Suwelack die besonderen Aspekte 
           der Frauenherzen gezielt. Die Beratung ist abgestimmt auf die spezifischen Risiken und 
           Symptome bei Frauen – für eine präzise, geschlechtersensible Betreuung.
         </p>

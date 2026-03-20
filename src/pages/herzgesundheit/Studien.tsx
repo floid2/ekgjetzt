@@ -147,8 +147,8 @@ const Studien = () => {
       <div className="p-6 bg-amber-50 border border-amber-200 rounded-xl my-8">
         <h3 className="text-lg font-semibold text-amber-800 mb-2">Bleiben Sie informiert</h3>
         <p className="text-amber-800 mb-0">
-          Die Herzmedizin entwickelt sich schnell. Im Herzschlag-Club erhalten Sie regelmäßig Updates 
-          zu relevanten Entwicklungen und wie sie Ihre persönliche Herzgesundheit betreffen könnten.
+          Die Herzmedizin entwickelt sich schnell. Bei EKGJetzt bleiben Sie auf dem Laufenden über 
+          relevante Entwicklungen und wie sie Ihre persönliche Herzgesundheit betreffen könnten.
         </p>
       </div>
 

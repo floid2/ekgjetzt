@@ -149,14 +149,13 @@ const Blog = () => {
               Bleiben Sie informiert
             </h2>
             <p className="text-muted-foreground mb-6">
-              Im Herzschlag-Club erhalten Sie regelmäßige Updates zu Herzgesundheit, neue Artikel und 
-              persönliche Einschätzungen zu Ihren EKG-Daten.
+              Entdecken Sie weitere Artikel rund um Herzgesundheit, EKG-Analysen und kardiologische Vorsorge.
             </p>
             <Link 
-              to="/herzschlagclub"
+              to="/herzgesundheit"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors"
             >
-              Mehr über den Herzschlag-Club
+              Zur Herzgesundheit
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

@@ -106,8 +106,8 @@ const Risikofaktoren = () => {
         <h3 className="text-lg font-semibold text-foreground mb-2">Ihr persönliches Risiko</h3>
         <p className="text-muted-foreground mb-0">
           Das Zusammenspiel dieser Faktoren bestimmt Ihr individuelles Risiko. Eine regelmäßige ärztliche 
-          Kontrolle hilft, Risiken früh zu erkennen und gegenzusteuern. Im Herzschlag-Club erhalten Sie 
-          regelmäßige Einschätzungen und individuelle Empfehlungen.
+          Kontrolle hilft, Risiken früh zu erkennen und gegenzusteuern. Bei EKGJetzt erhalten Sie 
+          fachärztliche Einschätzungen und individuelle Empfehlungen.
         </p>
       </div>
 
