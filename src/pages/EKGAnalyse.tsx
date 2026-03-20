@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Upload, AlertTriangle, CheckCircle, FileText, X, Heart, Watch, HelpCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,6 +14,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const WEBHOOK_URL = "https://n8n.avantic.de/webhook/7bce7b9e-6111-4674-bb47-6a648b731413";
 
 const EKGAnalyse = () => {
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -337,7 +339,7 @@ const EKGAnalyse = () => {
                   <label htmlFor="ihrName" className="block text-sm font-medium text-foreground mb-2">
                     Ihr Name <span className="text-destructive">*</span>
                   </label>
-                  <Input id="ihrName" name="ihrName" required placeholder="Vor- und Nachname" />
+                  <Input id="ihrName" name="ihrName" required placeholder="Vor- und Nachname" defaultValue={searchParams.get("name") || ""} />
                 </div>
 
                 {/* Email */}
@@ -345,7 +347,7 @@ const EKGAnalyse = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     E-Mail-Adresse <span className="text-destructive">*</span>
                   </label>
-                  <Input id="email" name="email" type="email" required placeholder="ihre@email.de" />
+                  <Input id="email" name="email" type="email" required placeholder="ihre@email.de" defaultValue={searchParams.get("email") || ""} />
                 </div>
 
                 {/* Geburtsdatum */}
