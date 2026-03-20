@@ -12,6 +12,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const WEBHOOK_URL = "https://n8n.avantic.de/webhook/zm-zweitmeinung-anfrage";
 
 const Zweitmeinung = () => {
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [consent1, setConsent1] = useState(false);
