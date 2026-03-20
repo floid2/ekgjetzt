@@ -132,7 +132,7 @@ const Ernaehrung = () => {
       <div className="p-6 bg-primary/5 rounded-xl my-8">
         <h3 className="text-lg font-semibold text-foreground mb-2">Individuelle Beratung</h3>
         <p className="text-muted-foreground mb-0">
-          Im Herzschlag-Club erhalten Sie neben regelmäßigen EKG-Checks auch individuelle Empfehlungen 
+          Bei EKGJetzt erhalten Sie neben fachärztlichen EKG-Analysen auch individuelle Empfehlungen 
           zu Ernährung und Lebensstil – abgestimmt auf Ihre persönliche Situation und Ihre Gesundheitsdaten.
         </p>
       </div>
