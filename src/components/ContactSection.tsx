@@ -34,6 +34,21 @@ const ContactSection = () => {
   const showForm = selectedService === "" || selectedService === "allgemein";
   const isRedirectService = selectedService === "ekg" || selectedService === "zweitmeinung" || selectedService === "video";
 
+  const getFormParams = () => {
+    const vorname = (document.querySelector('#contact-vorname') as HTMLInputElement)?.value || "";
+    const nachname = (document.querySelector('#contact-nachname') as HTMLInputElement)?.value || "";
+    const email = (document.querySelector('#contact-email') as HTMLInputElement)?.value || "";
+    const params = new URLSearchParams();
+    if (vorname || nachname) params.set("name", `${vorname} ${nachname}`.trim());
+    if (email) params.set("email", email);
+    return params.toString();
+  };
+
+  const getRedirectHref = (basePath: string) => {
+    const params = getFormParams();
+    return params ? `${basePath}?${params}` : basePath;
+  };
+
   const redirectContent: Record<string, { text: string; buttonText: string; href: string; isMail?: boolean }> = {
     ekg: {
       text: "Für die EKG-Analyse nutzen Sie bitte unser spezielles Anfrageformular mit Upload-Funktion.",
