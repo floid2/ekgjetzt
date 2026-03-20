@@ -239,7 +239,7 @@ const EKGAnalyse = () => {
                 <h2 className="text-xl font-serif text-foreground">So exportieren Sie Ihr EKG als PDF</h2>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Um Ihr Smartwatch-EKG einzureichen, benötigen wir es als PDF- oder Bilddatei. Wählen Sie Ihre Uhr aus:
+                Wir unterstützen EKGs aller Smartwatches und EKG-Geräte – unabhängig vom Hersteller. Reichen Sie Ihr EKG einfach als PDF- oder Bilddatei ein. Die folgenden Anleitungen zeigen exemplarisch, wie der Export bei den gängigsten Uhren funktioniert:
               </p>
 
               <Accordion type="single" collapsible className="w-full">
@@ -280,6 +280,40 @@ const EKGAnalyse = () => {
                   </AccordionContent>
                 </AccordionItem>
 
+                <AccordionItem value="huawei">
+                  <AccordionTrigger className="text-sm font-semibold">Huawei Watch (GT 3 Pro, GT 5 Pro, Watch D2 und weitere)</AccordionTrigger>
+                  <AccordionContent>
+                    <ol className="list-decimal list-inside space-y-1.5 text-sm text-muted-foreground mb-3">
+                      <li>Öffnen Sie die <strong>Huawei Health App</strong> auf Ihrem Smartphone</li>
+                      <li>Gehen Sie zu <strong>Herz → EKG</strong></li>
+                      <li>Wählen Sie die gewünschte EKG-Aufzeichnung aus</li>
+                      <li>Tippen Sie auf das <strong>Download-Symbol</strong> oben rechts im EKG-Detail-Bildschirm</li>
+                      <li>Der EKG-Bericht wird als PDF heruntergeladen</li>
+                      <li>Alternativ: Tippen Sie auf <strong>Teilen</strong>, um die PDF direkt per E-Mail zu senden</li>
+                    </ol>
+                    <p className="text-xs text-muted-foreground bg-secondary/50 p-3 rounded-lg">
+                      <strong>Hinweis:</strong> Die EKG-Funktion ist auf der Huawei Watch GT 3 Pro, GT 5 Pro, Watch D, Watch D2, Watch 4 (Pro) und weiteren Modellen verfügbar.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="garmin">
+                  <AccordionTrigger className="text-sm font-semibold">Garmin (Fenix 8, Venu 3 und weitere)</AccordionTrigger>
+                  <AccordionContent>
+                    <ol className="list-decimal list-inside space-y-1.5 text-sm text-muted-foreground mb-3">
+                      <li>Öffnen Sie die <strong>Garmin Connect App</strong> auf Ihrem Smartphone</li>
+                      <li>Tippen Sie auf das <strong>Menü (•••)</strong> unten rechts</li>
+                      <li>Gehen Sie zu <strong>Gesundheit & Leistung → EKG</strong></li>
+                      <li>Wählen Sie die gewünschte Aufzeichnung aus</li>
+                      <li>Tippen Sie auf <strong>Teilen</strong> oder <strong>PDF exportieren</strong></li>
+                      <li>Speichern Sie die PDF und laden Sie sie im Formular hoch</li>
+                    </ol>
+                    <p className="text-xs text-muted-foreground bg-secondary/50 p-3 rounded-lg">
+                      <strong>Hinweis:</strong> Die EKG-Funktion ist auf der Garmin Fenix 8, Venu 3, Venu 3S und weiteren Modellen mit ELEVATE Gen 5 Sensor verfügbar.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
                 <AccordionItem value="withings">
                   <AccordionTrigger className="text-sm font-semibold">Withings (ScanWatch, Move ECG)</AccordionTrigger>
                   <AccordionContent>
@@ -306,13 +340,16 @@ const EKGAnalyse = () => {
                 </AccordionItem>
 
                 <AccordionItem value="other">
-                  <AccordionTrigger className="text-sm font-semibold">Andere Uhren / Kein PDF-Export möglich?</AccordionTrigger>
+                  <AccordionTrigger className="text-sm font-semibold">Andere Uhren / Anderes EKG-Gerät</AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-sm text-muted-foreground mb-2">Kein Problem! Sie können auch Screenshots hochladen:</p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Ihre Uhr oder Ihr EKG-Gerät ist nicht in der Liste? Prüfen Sie zunächst in der zugehörigen App, ob es eine Export- oder Teilen-Funktion gibt – die meisten EKG-fähigen Geräte bieten einen PDF-Export an.
+                    </p>
+                    <p className="text-sm text-muted-foreground mb-2 font-medium">Falls kein PDF-Export möglich ist:</p>
                     <ol className="list-decimal list-inside space-y-1.5 text-sm text-muted-foreground mb-3">
-                      <li>Öffnen Sie die EKG-Aufzeichnung in der App Ihrer Uhr</li>
+                      <li>Öffnen Sie die EKG-Aufzeichnung in der App Ihres Geräts</li>
                       <li>Machen Sie Screenshots der gesamten EKG-Kurve</li>
-                      <li>Laden Sie die Bilder im Formular hoch – mehrere Dateien sind möglich</li>
+                      <li>Laden Sie die Bilder über die Upload-Felder im Formular hoch</li>
                     </ol>
                     <p className="text-xs text-muted-foreground bg-primary/5 p-3 rounded-lg">
                       <strong>Tipp:</strong> Achten Sie darauf, dass die gesamte Kurve, die Herzfrequenz und der Zeitstempel sichtbar sind.
@@ -320,6 +357,16 @@ const EKGAnalyse = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+
+              {/* Info-Box */}
+              <div className="mt-4 p-4 bg-primary/5 border border-primary/20 rounded-xl">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">
+                    <strong className="text-foreground">Wir akzeptieren EKGs aller Hersteller und Geräte</strong> – egal ob Smartwatch, mobiles EKG-Gerät oder Klinik-EKG. Wichtig ist nur, dass die Aufzeichnung als PDF oder Bilddatei vorliegt.
+                  </p>
+                </div>
+              </div>
 
               <div className="mt-4 flex items-start gap-2 text-sm text-muted-foreground">
                 <HelpCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
